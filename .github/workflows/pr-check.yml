@@ -1,0 +1,12 @@
+name: PR Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  corrigir:
+    uses: JoaoMatheusND/ECOM042-CI/.github/workflows/check-activity.yml@main
+    with:
+      atividade: ${{ github.head_ref }}
