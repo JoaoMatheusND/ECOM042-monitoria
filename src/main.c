@@ -9,10 +9,17 @@
  *******************************************************************/
 
 #include <zephyr/kernel.h>
+#include <zephyr/sys/util.h>
+
+#include "debounce.h"
 
 int main(void)
 {
-	printk("Hello World! %s\n", CONFIG_BOARD_TARGET);
+	bool samples[] = {false, true, false, true, true, true};
+
+	for (int i = 0; i < ARRAY_SIZE(samples); i++) {
+		printk("stable = %d\n", debounce_update(samples[i]));
+	}
 
 	return 0;
 }
