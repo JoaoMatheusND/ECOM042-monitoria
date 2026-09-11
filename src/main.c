@@ -10,9 +10,17 @@
 
 #include <zephyr/kernel.h>
 
+#include "reg.h"
+
 int main(void)
 {
-	printk("Hello World! %s\n", CONFIG_BOARD_TARGET);
+	uint8_t reg = 0x00;
+
+	reg_set_bit(&reg, 3);
+	reg_set_bit(&reg, 0);
+	reg_clear_bit(&reg, 3);
+
+	printk("reg = 0x%02X\n", reg);
 
 	return 0;
 }
