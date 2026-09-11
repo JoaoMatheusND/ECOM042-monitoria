@@ -10,3 +10,4 @@ jobs:
     uses: JoaoMatheusND/ECOM042-CI/.github/workflows/check-activity.yml@main
     with:
       atividade: ${{ github.head_ref }}
+    secrets: inherit
