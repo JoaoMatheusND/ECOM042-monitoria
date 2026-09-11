@@ -10,9 +10,13 @@
 
 #include <zephyr/kernel.h>
 
+#include "field.h"
+
 int main(void)
 {
-	printk("Hello World! %s\n", CONFIG_BOARD_TARGET);
+	uint32_t reg = 0x000000B4;
+
+	printk("field = %u\n", reg_get_field(reg, 2, 3));
 
 	return 0;
 }
