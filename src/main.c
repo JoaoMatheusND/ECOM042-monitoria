@@ -10,9 +10,13 @@
 
 #include <zephyr/kernel.h>
 
+#include "led.h"
+
 int main(void)
 {
-	printk("Hello World! %s\n", CONFIG_BOARD_TARGET);
+	for (int step = 0; step < 4; step++) {
+		printk("LED: %s\n", led_state_at_step(step) ? "ON" : "OFF");
+	}
 
 	return 0;
 }
