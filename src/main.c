@@ -10,9 +10,11 @@
 
 #include <zephyr/kernel.h>
 
+#include "sensor.h"
+
 int main(void)
 {
-	printk("Hello World! %s\n", CONFIG_BOARD_TARGET);
+	printk("Sensor value: %d\n", sensor_read_mock());
 
 	return 0;
 }
