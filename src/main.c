@@ -10,9 +10,30 @@
 
 #include <zephyr/kernel.h>
 
+#include "traffic_light.h"
+
+static const char *tl_state_name(enum tl_state state)
+{
+	switch (state) {
+	case TL_RED:
+		return "RED";
+	case TL_GREEN:
+		return "GREEN";
+	case TL_YELLOW:
+		return "YELLOW";
+	default:
+		return "?";
+	}
+}
+
 int main(void)
 {
-	printk("Hello World! %s\n", CONFIG_BOARD_TARGET);
+	enum tl_state state = TL_RED;
+
+	for (int i = 0; i < 4; i++) {
+		state = tl_next_state(state);
+		printk("%s\n", tl_state_name(state));
+	}
 
 	return 0;
 }
