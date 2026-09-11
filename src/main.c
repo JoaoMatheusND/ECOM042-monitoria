@@ -10,9 +10,18 @@
 
 #include <zephyr/kernel.h>
 
+#include "tasks.h"
+
 int main(void)
 {
-	printk("Hello World! %s\n", CONFIG_BOARD_TARGET);
+	for (int tick = 0; tick < 6; tick++) {
+		if (task_a_should_run(tick)) {
+			printk("tick %d: A\n", tick);
+		}
+		if (task_b_should_run(tick)) {
+			printk("tick %d: B\n", tick);
+		}
+	}
 
 	return 0;
 }
