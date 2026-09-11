@@ -20,6 +20,9 @@ jobs:
     uses: JoaoMatheusND/ECOM042-CI/.github/workflows/check-activity.yml@main
     with:
       atividade: ${{ github.head_ref }}
+<<<<<<< HEAD
       student_repository: ${{ github.event.pull_request.head.repo.full_name }}
       student_ref: ${{ github.event.pull_request.head.sha }}
+=======
+>>>>>>> 0d1e984 (CI: repassa ATIVIDADES_TOKEN pro workflow reutilizável)
     secrets: inherit
