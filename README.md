@@ -7,8 +7,8 @@ toolchain inteira funciona: compilador cruzado, build e execução do
 binário no board (ou simulado, no caso do `native_sim`). É o primeiro
 contato com o fluxo que vai se repetir em toda atividade daqui pra frente.
 
-Sua tarefa é imprimir, via console, uma mensagem confirmando isso — usando
-a API de log do Zephyr (`printk`) — junto de uma informação que identifica
+Sua tarefa é imprimir, via console, uma mensagem confirmando isso, usando
+a API de log do Zephyr (`printk`), já implementado, junto de uma informação que identifica
 pra qual board o firmware foi compilado.
 
 ## Como entregar

@@ -1,7 +1,14 @@
 name: PR Check
 
 on:
-  pull_request:
+  # pull_request_target (não pull_request): PR de fork de aluno não recebe
+  # secrets em pull_request comum. Roda no contexto do repo base (secrets
+  # disponíveis); o checkout do código do aluno no workflow chamado usa
+  # explicitamente o SHA/repo do PR (ver check-activity.yml), não o default
+  # (que seria a branch base). O secret usado (ATIVIDADES_TOKEN) é
+  # fine-grained, só leitura, restrito a 1 repo privado — blast radius
+  # limitado caso o código do aluno tente exfiltrá-lo durante o build.
+  pull_request_target:
     branches:
       - main
 
@@ -10,4 +17,6 @@ jobs:
     uses: JoaoMatheusND/ECOM042-CI/.github/workflows/check-activity.yml@main
     with:
       atividade: ${{ github.head_ref }}
+      student_repository: ${{ github.event.pull_request.head.repo.full_name }}
+      student_ref: ${{ github.event.pull_request.head.sha }}
     secrets: inherit
