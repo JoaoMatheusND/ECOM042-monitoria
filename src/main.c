@@ -2,17 +2,24 @@
  * @file main.c
  *
  * @brief Main file.
- * @author João Matheus Nascimento Dias (jmnd@ic.ufal.br)
- * @version 0.1
- * @date 26/08/2026
+ * @author coquinha0 (rapidoesso@gmail.com)
+ * @version 0.2
+ * @date 22/09/2026
  *******************************************************************/
 
 #include <zephyr/kernel.h>
 
+#include "commands.h"
+
 int main(void)
 {
-	/* TODO (Atividade-02): criar command.{h, c} e commands.{h, c}
-	 * (Command Pattern), montar a tabela de comandos e despachar.
+	/* Simula comandos chegando de fontes diferentes (UART, BLE,
+	 * botão, timer): quem despacha só conhece o nome, nunca o
+	 * comando concreto por trás dele.
 	 */
+	commands_dispatch("LED_ON");
+	commands_dispatch("LED_OFF");
+	commands_dispatch("FOO");
+
 	return 0;
 }
