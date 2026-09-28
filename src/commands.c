@@ -21,7 +21,7 @@ const command_t *commands_get(enum command_id id)
 
 int commands_dispatch(enum command_id id, char *name)
 {
-	
+
 	for (size_t i = 0; i < ARRAY_SIZE(command_table); i++) {
 		command_t *ptr = &command_table[i];
 
@@ -30,7 +30,7 @@ int commands_dispatch(enum command_id id, char *name)
 		}
 
 		if (ptr->execute == NULL) {
-			return -2;
+			return -1;
 		}
 
 		command_execute(ptr);
