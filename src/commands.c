@@ -19,7 +19,7 @@ const command_t *commands_get(enum command_id id)
 	return command_table[id];
 }
 
-int commands_dispatch(enum command_id id, char *name)
+int commands_dispatch(enum command_id id, const char *name)
 {
 
 	for (size_t i = 0; i < ARRAY_SIZE(command_table); i++) {

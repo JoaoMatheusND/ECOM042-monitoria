@@ -16,7 +16,7 @@ int main(void)
 {
 
 	static const enum command_id events[] = {CMD_UART, CMD_BLE, CMD_BUTTON, CMD_TIMER};
-	static const char *const requests[] = {
+	static const char *requests[] = {
 		"uart",
 		"ble",
 		"button",
