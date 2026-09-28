@@ -2,6 +2,7 @@
 #include <zephyr/sys/util.h>
 
 #include <stddef.h>
+#include <string.h>
 
 static const command_t *const command_table[CMD_COUNT] = {
 	[CMD_UART] = &cmd_uart,
@@ -23,7 +24,7 @@ int commands_dispatch(enum command_id id, const char *name)
 {
 
 	for (size_t i = 0; i < ARRAY_SIZE(command_table); i++) {
-		command_t *ptr = &command_table[i];
+		const command_t *ptr = command_table[i];
 
 		if (ptr->name == NULL || strcmp(ptr->name, name) != 0) {
 			continue;
