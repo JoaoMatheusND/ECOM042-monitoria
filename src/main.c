@@ -15,9 +15,15 @@ int main(void)
 {
 
 	static const enum command_id events[] = {CMD_UART, CMD_BLE, CMD_BUTTON, CMD_TIMER};
+	static const char *const requests[] = {
+		"uart",
+		"ble",
+		"button",
+		"timer",
+	};
 
 	for (size_t i = 0; i < ARRAY_SIZE(events); i++) {
-		(void)commands_dispatch(events[i], events[i]->name);
+		(void)commands_dispatch(events[i], requests[i]);
 	}
 
 	return 0;
