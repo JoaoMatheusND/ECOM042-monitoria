@@ -3,7 +3,6 @@
 
 struct command;
 
-
 struct command {
 	const char *name;
 	int (*execute)(const struct command *self);
