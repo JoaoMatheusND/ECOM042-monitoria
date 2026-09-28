@@ -3,11 +3,10 @@
 
 struct command;
 
-typedef int (*command_execute_fn)(const struct command *self);
 
 struct command {
 	const char *name;
-	command_execute_fn execute;
+	int (*execute)(const struct command *self);
 	void *ctx;
 };
 
