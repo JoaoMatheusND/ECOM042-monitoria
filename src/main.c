@@ -2,17 +2,23 @@
  * @file main.c
  *
  * @brief Main file.
- * @author João Matheus Nascimento Dias (jmnd@ic.ufal.br)
+ * @author 
  * @version 0.1
- * @date 26/08/2026
+ * @date 27/09/2027
  *******************************************************************/
 
 #include <zephyr/kernel.h>
 
+#include "commands.h"
+
 int main(void)
 {
-	/* TODO (Atividade-02): criar command.{h, c} e commands.{h, c}
-	 * (Command Pattern), montar a tabela de comandos e despachar.
-	 */
+
+	static const enum command_id events[] = {CMD_UART, CMD_BLE, CMD_BUTTON, CMD_TIMER};
+
+	for (size_t i = 0; i < ARRAY_SIZE(events); i++) {
+		(void)commands_dispatch(events[i]);
+	}
+
 	return 0;
 }
