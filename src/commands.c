@@ -21,10 +21,9 @@ const command_t *commands_get(enum command_id id)
 
 int commands_dispatch(enum command_id id, char *name)
 {
-	const command_t *ptr = commands_get(id);
-
+	
 	for (size_t i = 0; i < ARRAY_SIZE(command_table); i++) {
-		const command_t *ptr = &command_table[i];
+		command_t *ptr = &command_table[i];
 
 		if (ptr->name == NULL || strcmp(ptr->name, name) != 0) {
 			continue;
