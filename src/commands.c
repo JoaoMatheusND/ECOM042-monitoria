@@ -18,7 +18,23 @@ const command_t *commands_get(enum command_id id)
 	return command_table[id];
 }
 
-int commands_dispatch(enum command_id id)
+int commands_dispatch(enum command_id id, char *name)
 {
-	return command_execute(commands_get(id));
+	const command_t *ptr = commands_get(id);
+
+	for (size_t i = 0; i < ARRAY_SIZE(command_table); i++) {
+		const command_t *ptr = &command_table[i];
+
+		if (ptr->name == NULL || strcmp(ptr->name, name) != 0) {
+			continue;
+		}
+
+		if (ptr->execute == NULL) {
+			return -2;
+		}
+
+		command_execute(ptr);
+	}
+
+	return 0;
 }

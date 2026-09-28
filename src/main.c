@@ -17,7 +17,7 @@ int main(void)
 	static const enum command_id events[] = {CMD_UART, CMD_BLE, CMD_BUTTON, CMD_TIMER};
 
 	for (size_t i = 0; i < ARRAY_SIZE(events); i++) {
-		(void)commands_dispatch(events[i]);
+		(void)commands_dispatch(events[i], events[i]->name);
 	}
 
 	return 0;

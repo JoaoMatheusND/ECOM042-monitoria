@@ -18,6 +18,6 @@ extern const command_t cmd_timer;
 
 const command_t *commands_get(enum command_id id);
 
-int commands_dispatch(enum command_id id);
+int commands_dispatch(enum command_id id, char *name);
 
 #endif /* COMMANDS_H_ */
