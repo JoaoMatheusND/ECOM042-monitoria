@@ -29,7 +29,6 @@ typedef struct {
 
 bool get_bit(Bits *bits, uint8_t i)
 {
-
 	return (*(uint8_t *)bits & 1 << i) ? 1 : 0;
 }
 

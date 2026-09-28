@@ -30,10 +30,8 @@ Command *command_init(void (*execute)(void *), void *user_data, size_t size)
 	return new_command;
 }
 
-
 void command_destroy(Command *self)
 {
-
 	if (self->user_data == NULL) {
 		goto null_data;
 	}
