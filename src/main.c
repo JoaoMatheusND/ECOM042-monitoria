@@ -23,7 +23,7 @@ int main(void)
 		"timer",
 	};
 
-	for (size_t i = 0; i < ARRAY_SIZE(events); i++) {
+	for (size_t i = 0; i < sizeof(events) / sizeof(events[0]); i++) {
 		(void)commands_dispatch(events[i], requests[i]);
 	}
 
