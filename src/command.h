@@ -32,8 +32,8 @@ typedef cmd_status_t (*cmd_exec_fn_t)(const cmd_args_t *args);
  * @brief Entrada de registro na tabela de comandos.
  */
 typedef struct {
-	const char *name;      /**< Identificador textual do comando. */
-	cmd_exec_fn_t execute; /**< Função de execução associada. */
+	const char *name;                                /**< Identificador textual do comando. */
+	cmd_status_t (*execute)(const cmd_args_t *args); /**< Função de execução associada. */
 } command_t;
 
 #endif /* COMMAND_H */
