@@ -6,6 +6,8 @@ find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 
 project(hello_world)
 
+zephyr_include_directories(${CMAKE_CURRENT_LIST_DIR}/include)
+
 file(GLOB SOURCES_APP src/*.c)
 
 target_sources(app PRIVATE ${SOURCES_APP})
