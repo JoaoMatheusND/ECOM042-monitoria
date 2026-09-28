@@ -1,4 +1,5 @@
 #include "commands.h"
+#include <zephyr/sys/util.h>
 
 #include <stddef.h>
 
