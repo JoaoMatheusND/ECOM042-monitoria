@@ -3,13 +3,11 @@
 
 struct command;
 
-struct command {
+typedef struct command {
 	const char *name;
 	void (*execute)(void);
 	void *ctx;
-};
-
-typedef struct command command_t;
+} command_t;
 
 int command_execute(const command_t *cmd);
 
