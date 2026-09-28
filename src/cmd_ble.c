@@ -2,10 +2,9 @@
 
 #include "commands.h"
 
-static int cmd_ble_execute(const command_t *self)
+static void cmd_ble_execute()
 {
-	printk("[%s] Recebido comando via BLE\n", self->name);
-	return 0;
+	printk("Recebido comando via BLE\n");
 }
 
 const command_t cmd_ble = {

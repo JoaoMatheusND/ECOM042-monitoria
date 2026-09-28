@@ -2,10 +2,9 @@
 
 #include "commands.h"
 
-static int cmd_timer_execute(const command_t *self)
+static void cmd_timer_execute()
 {
-	printk("[%s] Timer expirou\n", self->name);
-	return 0;
+	printk("Timer expirou\n");
 }
 
 const command_t cmd_timer = {

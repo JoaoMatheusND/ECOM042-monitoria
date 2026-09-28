@@ -9,5 +9,6 @@ int command_execute(const command_t *cmd)
 		return -EINVAL;
 	}
 
-	return cmd->execute(cmd);
+	cmd->execute();
+	return 0;
 }

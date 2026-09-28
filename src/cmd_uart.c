@@ -2,10 +2,9 @@
 
 #include "commands.h"
 
-static int cmd_uart_execute(const command_t *self)
+static void cmd_uart_execute()
 {
-	printk("[%s] Recebido comando via UART\n", self->name);
-	return 0;
+	printk("Recebido comando via UART\n");
 }
 
 const command_t cmd_uart = {

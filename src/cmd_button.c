@@ -2,10 +2,9 @@
 
 #include "commands.h"
 
-static int cmd_button_execute(const command_t *self)
+static void cmd_button_execute()
 {
-	printk("[%s] Botao pressionado\n", self->name);
-	return 0;
+	printk("Botao pressionado\n");
 }
 
 const command_t cmd_button = {
