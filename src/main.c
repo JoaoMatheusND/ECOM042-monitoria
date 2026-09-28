@@ -1,18 +1,17 @@
-/*******************************************************************
- * @file main.c
- *
- * @brief Main file.
- * @author João Matheus Nascimento Dias (jmnd@ic.ufal.br)
- * @version 0.1
- * @date 26/08/2026
- *******************************************************************/
+#include <stddef.h>
 
-#include <zephyr/kernel.h>
+#include "source.h"
 
 int main(void)
 {
-	/* TODO (Atividade-02): criar command.{h, c} e commands.{h, c}
-	 * (Command Pattern), montar a tabela de comandos e despachar.
-	 */
+	source_send("LED", "LED_ON", NULL);
+	source_send("BTN", "BTN_PRESS", NULL);
+	source_send("BOARD", "STATUS", NULL);
+	source_send("BTN", "BTN_RELEASE", NULL);
+	source_send("LED", "LED_OFF", NULL);
+	source_send("BOARD", "STATUS", NULL);
+	source_send("UART", "RESET", NULL);
+	source_send("I2C", "FOO_BAR", NULL);
+
 	return 0;
 }
