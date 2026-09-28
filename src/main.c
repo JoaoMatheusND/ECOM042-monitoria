@@ -2,7 +2,7 @@
  * @file main.c
  *
  * @brief Main file.
- * @author 
+ * @author matheus
  * @version 0.1
  * @date 27/09/2027
  *******************************************************************/
