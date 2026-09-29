@@ -1,7 +1,10 @@
 #include "cmd.h"
 #include "cmds.h"
+
+#include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include <zephyr/kernel.h>
 
@@ -32,6 +35,7 @@ static int add_value(void **args, int argc)
 	return A + B;
 }
 
+/** Command table, terminated by @ref TABLE_TERMINATOR. */
 static const struct cmd_command table[] = {
 	{.name = "show_serial",
 	 .description = "Show value incoming from serial",

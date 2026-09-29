@@ -7,16 +7,25 @@
 #include <string.h>
 #include <zephyr/kernel.h>
 
+/**
+ * @brief Look up a command in the command table by name.
+ *
+ * @param[in]  name Name of the command to find.
+ * @param[out] out  Receives a copy of the command entry when found.
+ *
+ * @retval 0       Command found.
+ * @retval -EINVAL Command not found.
+ * @retval -ENOENT Command table is unavailable.
+ */
 static int cmd_find_command(const char *name, struct cmd_command *out)
 {
-	int target_len = strlen(name);
 	const struct cmd_command *table = cmd_get_command_table();
 
 	if (table == NULL) {
 		return -ENOENT; /* verificar qual retorno colocar aqui*/
 	}
 
-	while (strlen(table->name) != target_len && strncmp(table->name, name, target_len) != 0) {
+	while (strcmp(table->name, name) != 0) {
 		if (strcmp(table->name, TABLE_TERMINATOR) == 0) {
 			return -EINVAL;
 		}

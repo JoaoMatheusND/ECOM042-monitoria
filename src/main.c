@@ -10,24 +10,24 @@ int main()
 	int ret;
 
 	/* Listing commands */
-	printk("Listing commands\r\n"); 
+	printk("Listing commands\r\n");
 
 	ret = cmd_list_commands();
 	if (ret != 0) {
 		return ret;
 	}
 
-	printk("\n"); 
+	printk("\n");
 
 	/* Getting a command description */
-	printk("Getting [get_adc] command description\r\n"); 
+	printk("Getting [get_adc] command description\r\n");
 
 	ret = cmd_help("get_adc");
 	if (ret != 0) {
 		return ret;
 	}
 
-	printk("\n"); 
+	printk("\n");
 
 	/* Trying to execute a command that does't exist */
 	printk("Trying to execute a command that doesn't exist\r\n");
@@ -37,7 +37,7 @@ int main()
 		printk("Command doesn't exist: %d\r\n", ret);
 	}
 
-	printk("\n"); 
+	printk("\n");
 
 	/* executing commands */
 	printk("Executing all commands\r\n");
