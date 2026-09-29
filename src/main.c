@@ -11,8 +11,8 @@
 
 int main(void)
 {
-
-	/**! printk("Hello World! %s\n", CONFIG_BOARD_TARGET); */
+	/* Mostra a mensagem e a placa usada na compilacao. */
+	printk("Hello World! %s\n", CONFIG_BOARD_TARGET);
 
 	return 0;
 }
