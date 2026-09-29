@@ -1,86 +1,71 @@
 #include "cmd.h"
+#include "cmds.h"
+
+#include <stdio.h>
+#include <stdlib.h>
 #include <zephyr/kernel.h>
 
-int show_value_serial_handler(struct cmd_arg *args, size_t argc)
-{
-	int serial_value = *(int *)args[0].data;
-
-	printk("Value from serial: %d\r\n", serial_value);
-
-	return 0;
-}
-
-/* Sims an adc value reading */
-int get_adc_handler(struct cmd_arg *args, size_t argc)
-{
-	static int adc = 250;
-
-	int current_adc = adc;
-
-	adc++;
-
-	return current_adc;
-}
-
-int add_value_handler(struct cmd_arg *args, size_t argc)
-{
-	int A = *(int *)args[0].data;
-	int B = *(int *)args[1].data;
-
-	return A + B;
-}
-
-int main(void)
+int main()
 {
 	int ret;
 
-	CMD_REGISTER(serial, show_value_serial_handler, "Shows value coming from uart");
+	/* Listing commands */
+	printk("Listing commands\r\n"); 
 
-	CMD_REGISTER(get_adc, get_adc_handler, "Reads value from adc");
-
-	CMD_REGISTER(add_value, add_value_handler, "Adds two values");
-
-	/* Get command description */
-	ret = cmd_help("serial");
-
+	ret = cmd_list_commands();
 	if (ret != 0) {
-		printk("Can't find cmd description. Cmd does not exist\r\n");
+		return ret;
 	}
 
-	int serial_value = 1024;
-	struct cmd_arg args1 = {.name = "serial_value", .data = &serial_value};
-	ret = cmd_execute("serial", &args1, 1);
+	printk("\n"); 
+
+	/* Getting a command description */
+	printk("Getting [get_adc] command description\r\n"); 
+
+	ret = cmd_help("get_adc");
 	if (ret != 0) {
-		printk("Command [serial] does not exist\r\n");
+		return ret;
 	}
+
+	printk("\n"); 
+
+	/* Trying to execute a command that does't exist */
+	printk("Trying to execute a command that doesn't exist\r\n");
+
+	ret = cmd_execute("none", NULL, 0);
+	if (ret < 0) {
+		printk("Command doesn't exist: %d\r\n", ret);
+	}
+
+	printk("\n"); 
+
+	/* executing commands */
+	printk("Executing all commands\r\n");
 
 	ret = cmd_execute("get_adc", NULL, 0);
 	if (ret < 0) {
-		printk("Command [get_adc] does not exist\r\n");
+		return ret;
 	}
+	printk("ADC reading: %d\r\n", ret);
 
-	printk("Adc reading: %d\r\n", ret);
-
-	int value_a = 40;
-	struct cmd_arg a = {.name = "value_a", .data = (void *)&value_a};
-
-	int value_b = 20;
-	struct cmd_arg b = {.name = "value_b", .data = (void *)&value_b};
-
-	struct cmd_arg args2[] = {a, b};
-
-	ret = cmd_execute("add_value", args2, 2);
+	ret = cmd_execute("show_serial", NULL, 0);
 	if (ret < 0) {
-		printk("Command [add_value] does not exist\r\n");
+		return ret;
 	}
 
-	printk("Add result: %d\r\n", ret);
+	int a = 10;
+	int b = 10;
 
-	/* Trying to execute a non existing command */
-	ret = cmd_execute("not_exists", NULL, 0);
+	int *p_a = &a;
+	int *p_b = &b;
+
+	void *args[] = {(void *)p_a, (void *)p_b};
+
+	ret = cmd_execute("add_value", args, 2);
 	if (ret < 0) {
-		printk("Command does not exist.\n\r");
+		return ret;
 	}
+	printk("Sum result: %d\r\n", ret);
 
 	return 0;
 }

@@ -1,37 +1,39 @@
 #include "cmd.h"
+#include "cmds.h"
+
 #include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <zephyr/kernel.h>
-#include <zephyr/sys/slist.h>
 
-static sys_slist_t command_list = SYS_SLIST_STATIC_INIT(&command_list);
-
-void cmd_register(struct cmd_command *cmd)
+static int cmd_find_command(const char *name, struct cmd_command *out)
 {
-	sys_slist_append(&command_list, &(cmd->node));
-}
+	int target_len = strlen(name);
+	const struct cmd_command *table = cmd_get_command_table();
 
-static int find_command(const char *name, struct cmd_command *out)
-{
-	size_t name_len = strlen(name);
-	struct cmd_command *command;
-
-	SYS_SLIST_FOR_EACH_CONTAINER(&command_list, command, node) {
-		if (name_len == strlen(command->name) &&
-		    strncmp(name, command->name, name_len) == 0) {
-			*out = *command;
-			return 0;
-		}
+	if (table == NULL) {
+		return -ENOENT; /* verificar qual retorno colocar aqui*/
 	}
-	return -ENOENT;
+
+	while (strlen(table->name) != target_len && strncmp(table->name, name, target_len) != 0) {
+		if (strcmp(table->name, TABLE_TERMINATOR) == 0) {
+			return -EINVAL;
+		}
+		table++;
+	}
+
+	*out = *table;
+
+	return 0;
 }
 
-int cmd_help(const char *cmd_name)
+int cmd_help(const char *name)
 {
 	struct cmd_command cmd;
 	int ret;
 
-	ret = find_command(cmd_name, &cmd);
+	ret = cmd_find_command(name, &cmd);
 
 	if (ret != 0) {
 		return ret;
@@ -42,12 +44,12 @@ int cmd_help(const char *cmd_name)
 	return 0;
 }
 
-int cmd_execute(const char *cmd_name, struct cmd_arg *args, size_t argc)
+int cmd_execute(const char *name, void **args, int argc)
 {
 	struct cmd_command cmd;
 	int ret;
 
-	ret = find_command(cmd_name, &cmd);
+	ret = cmd_find_command(name, &cmd);
 	if (ret != 0) {
 		return ret;
 	}
