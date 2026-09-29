@@ -7,12 +7,23 @@
  * @date 26/08/2026
  *******************************************************************/
 
-#include <zephyr/kernel.h>
+// #include <zephyr/kernel.h>
+#include "command.h"
+#include <stdint.h>
 
 int main(void)
 {
-	/* TODO (Atividade-02): criar command.{h, c} e commands.{h, c}
-	 * (Command Pattern), montar a tabela de comandos e despachar.
-	 */
+	printk("[LOG] Starting to handle commands...");
+
+	dispatch(UART_CMD);
+	dispatch(BLE_CMD);
+	dispatch(BUTTON_CMD);
+	dispatch(TIMER_CMD);
+
+	/*Constante existe mas não existe valor correspondente na tabela*/
+	dispatch(ERROR);
+
+	printk("[LOG] Finished handling");
+
 	return 0;
 }
