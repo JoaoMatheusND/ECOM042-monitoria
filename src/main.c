@@ -1,18 +1,22 @@
-/*******************************************************************
- * @file main.c
- *
- * @brief Main file.
- * @author João Matheus Nascimento Dias (jmnd@ic.ufal.br)
- * @version 0.1
- * @date 26/08/2026
- *******************************************************************/
+#include "command.h"
+#include "commands.h"
 
 #include <zephyr/kernel.h>
 
 int main(void)
 {
-	/* TODO (Atividade-02): criar command.{h, c} e commands.{h, c}
-	 * (Command Pattern), montar a tabela de comandos e despachar.
-	 */
+	/* Cada nome fica ligado a uma funcao. */
+	const struct command table[] = {
+		{"ola", command_hello},
+		{"placa", command_board},
+	};
+	const char *names[] = {"ola", "placa", "inexistente"};
+
+	for (size_t i = 0; i < ARRAY_SIZE(names); i++) {
+		if (command_dispatch(table, ARRAY_SIZE(table), names[i]) != 0) {
+			printk("Comando nao encontrado: %s\n", names[i]);
+		}
+	}
+
 	return 0;
 }
