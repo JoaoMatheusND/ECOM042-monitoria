@@ -3,7 +3,7 @@
 #include <errno.h>
 #include <string.h>
 
-int command_dispatch(const struct command *table, size_t count, const char *name)
+int command_dispatch(const Command *table, size_t count, const char *name)
 {
 	/* Procura o nome e chama a funcao do comando. */
 	for (size_t i = 0; i < count; i++) {

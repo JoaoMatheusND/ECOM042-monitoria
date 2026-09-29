@@ -6,7 +6,7 @@
 int main(void)
 {
 	/* Cada nome fica ligado a uma funcao. */
-	const struct command table[] = {
+	const Command table[] = {
 		{"ola", command_hello},
 		{"placa", command_board},
 	};
