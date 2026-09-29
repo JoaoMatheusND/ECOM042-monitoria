@@ -8,12 +8,13 @@
  *******************************************************************/
 
 #include "command.h"
+#include <stdlib.h>
 #include <zephyr/kernel.h>
 
 typedef struct {
 
-	char *name1;
-	char *name2;
+	char *d1;
+	char *data;
 } Data1;
 
 typedef struct {
@@ -36,8 +37,8 @@ void f1(void *usr_data)
 {
 	Data1 *user_data = (Data1 *)usr_data;
 
-	printk("Name1: %s\n", user_data->name1);
-	printk("Name2: %s\n", user_data->name2);
+	printk("Firmare: %s\n", user_data->d1);
+	printk("Data: %s\n", user_data->data);
 }
 
 void f2(void *usr_data)
@@ -71,22 +72,35 @@ void destroy_commands(struct command *commands[], size_t size)
 	}
 }
 
+const char *firmwares[] = {"uart", "button", "timer"};
+const size_t firmwares_number = sizeof(firmwares) / sizeof(*firmwares);
 int main(void)
 {
-	Data1 usr_data = {"Pessoa 1", "Pessoa 2"};
-	struct command *cmd = COMMAND_INIT(f1, &usr_data);
+	Data1 usr_data = {"data 1", "0001010101"};
+	struct command *cmd = command_init(firmwares[0], f1, &usr_data);
 
-	Bits bits = {0, 0, 1, 1, 1, 0, 1, 1};
-	struct command *port_a_cmd = COMMAND_INIT(f2, &bits);
+	Bits bits1 = {0, 0, 1, 1, 1, 0, 1, 1};
+	struct command *port_a_cmd = command_init(firmwares[1], f2, &bits1);
 
-	struct command *check_state_cmd = COMMAND_INIT(f3, NULL);
+	Bits bits2 = {1, 1, 1, 1, 1, 0, 1, 1};
+	struct command *port_b_cmd = command_init(firmwares[0], f2, &bits2);
 
-	struct command *all_commands[3] = {cmd, port_a_cmd, check_state_cmd};
+	Bits bits3 = {1, 0, 1, 1, 1, 0, 1, 1};
+	struct command *port_c_cmd = command_init(firmwares[1], f2, &bits3);
+
+	struct command *check_state_cmd = command_init(firmwares[2], f3, NULL);
+
+	struct command *all_commands[] = {cmd, port_a_cmd, port_b_cmd, port_c_cmd, check_state_cmd};
 
 	size_t commands_size = sizeof(all_commands) / sizeof(struct command *);
 
-	run_commands(all_commands, commands_size);
-	destroy_commands(all_commands, commands_size);
+	/* printk("Size: %d\n", firmwares_number); */
+	/* run_commands(all_commands, commands_size); */
+	/* destroy_commands(all_commands, commands_size); */
+
+	for (size_t i = 0; i < firmwares_number; i++) {
+		command_dispatch(all_commands, commands_size, firmwares[i]);
+	}
 
 	return 0;
 }
