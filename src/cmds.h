@@ -18,7 +18,7 @@
  *
  * @return Pointer to the first entry of the command table.
  */
-const struct cmd_command *cmd_get_command_table();
+const cmd_command *cmd_get_command_table();
 
 /**
  * @brief Print all registered commands and their descriptions.

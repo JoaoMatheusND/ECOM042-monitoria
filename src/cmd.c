@@ -17,9 +17,9 @@
  * @retval -EINVAL Command not found.
  * @retval -ENOENT Command table is unavailable.
  */
-static int cmd_find_command(const char *name, struct cmd_command *out)
+static int cmd_find_command(const char *name, cmd_command *out)
 {
-	const struct cmd_command *table = cmd_get_command_table();
+	const cmd_command *table = cmd_get_command_table();
 
 	if (table == NULL) {
 		return -ENOENT; /* verificar qual retorno colocar aqui*/
@@ -39,7 +39,7 @@ static int cmd_find_command(const char *name, struct cmd_command *out)
 
 int cmd_help(const char *name)
 {
-	struct cmd_command cmd;
+	cmd_command cmd;
 	int ret;
 
 	ret = cmd_find_command(name, &cmd);
@@ -55,7 +55,7 @@ int cmd_help(const char *name)
 
 int cmd_execute(const char *name, void **args, int argc)
 {
-	struct cmd_command cmd;
+	cmd_command cmd;
 	int ret;
 
 	ret = cmd_find_command(name, &cmd);

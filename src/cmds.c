@@ -36,7 +36,7 @@ static int add_value(void **args, int argc)
 }
 
 /** Command table, terminated by @ref TABLE_TERMINATOR. */
-static const struct cmd_command table[] = {
+static const cmd_command table[] = {
 	{.name = "show_serial",
 	 .description = "Show value incoming from serial",
 	 .handler = show_serial},
@@ -45,14 +45,14 @@ static const struct cmd_command table[] = {
 	{.name = TABLE_TERMINATOR, .description = "", .handler = NULL},
 };
 
-const struct cmd_command *cmd_get_command_table()
+const cmd_command *cmd_get_command_table()
 {
 	return table;
 }
 
 int cmd_list_commands()
 {
-	const struct cmd_command *table = cmd_get_command_table();
+	const cmd_command *table = cmd_get_command_table();
 
 	if (table == NULL) {
 		return -ENOENT;

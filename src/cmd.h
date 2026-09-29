@@ -13,11 +13,11 @@
 /**
  * @brief Describes a single command.
  */
-struct cmd_command {
+typedef struct {
 	const char *name;
 	const char *description;
 	int (*handler)(void **args, int argc);
-};
+} cmd_command;
 
 /**
  * @brief Print the description of a command.
