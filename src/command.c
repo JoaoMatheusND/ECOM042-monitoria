@@ -4,7 +4,7 @@
 #include <string.h>
 
 typedef struct command {
-	const char *user_data;
+	void *user_data;
 	const char *name;
 	void (*execute)(void *user_data);
 } Command;
