@@ -1,0 +1,14 @@
+NSI_NATIVE=1
+NSI_AR:=/nix/store/sf94i342x394ls6l9pfzrvh1f6dmhqzm-gcc-wrapper-15.2.0/bin/ar
+NSI_BUILD_OPTIONS:=-m64
+NSI_BUILD_PATH:=/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/NSI
+NSI_CC:=ccache /nix/store/sf94i342x394ls6l9pfzrvh1f6dmhqzm-gcc-wrapper-15.2.0/bin/gcc
+NSI_OBJCOPY:=/nix/store/sf94i342x394ls6l9pfzrvh1f6dmhqzm-gcc-wrapper-15.2.0/bin/objcopy
+NSI_EMBEDDED_CPU_SW:=/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/zephyr.elf 
+NSI_EXE:=/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/zephyr.exe
+NSI_EXTRA_SRCS:=
+NSI_LINK_OPTIONS:=-m64 -T /home/tl/Desktop/zephyr/zephyrproject/zephyr/boards/native/common/natsim_linker_script.ld
+NSI_EXTRA_LIBS:=
+NSI_PATH:=/home/tl/Desktop/zephyr/zephyrproject/zephyr/scripts/native_simulator/
+NSI_N_CPUS:=1
+NSI_LOCALIZE_OPTIONS:=--localize-symbol=CONFIG_* 

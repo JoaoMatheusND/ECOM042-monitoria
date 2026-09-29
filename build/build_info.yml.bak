@@ -1,0 +1,5 @@
+west:
+  command: /nix/store/csvf7fxgbg5azgd25draymrppvyqbwvn-python3.13-west-1.5.0/bin/west
+    build -b native_sim/native/64 . -t run --pristine
+  topdir: /home/tl/Desktop/zephyr/zephyrproject
+  version: 1.5.0
