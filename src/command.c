@@ -5,7 +5,7 @@
 
 #include <zephyr/sys/printk.h>
 
-int command_dispatch(const struct command *table, size_t count, const char *name)
+int command_dispatch(const command_t *table, size_t count, const char *name)
 {
 	if ((table == NULL) || (name == NULL)) {
 		return -EINVAL;

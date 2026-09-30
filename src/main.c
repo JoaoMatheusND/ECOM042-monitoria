@@ -16,7 +16,7 @@
 
 static struct semaforo sem;
 
-static const struct command tabela[] = {
+static const command_t tabela[] = {
 	{"verde", cmd_verde, &sem},       {"amarelo", cmd_amarelo, &sem},
 	{"vermelho", cmd_vermelho, &sem}, {"pedestre", cmd_pedestre, &sem},
 	{"alerta", cmd_alerta, &sem},
