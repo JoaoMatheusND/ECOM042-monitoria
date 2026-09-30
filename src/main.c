@@ -7,12 +7,16 @@
  * @date 26/08/2026
  *******************************************************************/
 
+#include "commands.h"
+#include "invoker.h"
 #include <zephyr/kernel.h>
 
 int main(void)
 {
-	/* TODO (Atividade-02): criar command.{h, c} e commands.{h, c}
-	 * (Command Pattern), montar a tabela de comandos e despachar.
-	 */
+	invoker_dispatch(&cmd_uart);
+	invoker_dispatch(&cmd_ble);
+	invoker_dispatch(&cmd_button);
+	invoker_dispatch(&cmd_timer);
+
 	return 0;
 }
