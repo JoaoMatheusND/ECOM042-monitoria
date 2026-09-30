@@ -9,10 +9,17 @@
 
 #include <zephyr/kernel.h>
 
+#include "command.h"
+#include "commands.h"
+
 int main(void)
 {
 	/* TODO (Atividade-02): criar command.{h, c} e commands.{h, c}
 	 * (Command Pattern), montar a tabela de comandos e despachar.
 	 */
+	command_run(commands, "hello");
+	command_run(commands, "status");
+	command_run(commands, "esseaquinaopassa");
+
 	return 0;
 }

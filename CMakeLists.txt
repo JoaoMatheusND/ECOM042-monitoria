@@ -8,4 +8,4 @@ project(hello_world)
 
 file(GLOB SOURCES_APP src/*.c)
 
-target_sources(app PRIVATE ${SOURCES_APP})
+target_sources(app PRIVATE src/main.c src/command.c src/commands.c)
