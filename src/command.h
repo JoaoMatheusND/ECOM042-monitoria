@@ -11,7 +11,6 @@ typedef struct command {
 	void (*execute)(void);
 } command_t;
 
-
 /**
  * @brief Look up @p name in @p table and run the matching command.
  *
