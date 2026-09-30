@@ -12,7 +12,7 @@
  * @return The value returned by the executed command, or -1 if no command
  *         with @p name is found.
  */
-int command_run(const struct command *table, const char *name)
+int command_run(const command_t *table, const char *name)
 {
 	size_t i;
 

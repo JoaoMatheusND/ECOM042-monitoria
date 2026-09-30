@@ -2,19 +2,17 @@
 
 #include <zephyr/kernel.h>
 
-static int cmd_hello(void)
+static void cmd_hello(void)
 {
 	printk("Hello World!\n");
-	return 0;
 }
 
-static int cmd_status(void)
+static void cmd_status(void)
 {
 	printk("Tudo certo por aqui.\n");
-	return 0;
 }
 
-const struct command commands[] = {
+const command_t commands[] = {
 	{"hello", cmd_hello},
 	{"status", cmd_status},
 	{NULL, NULL},
