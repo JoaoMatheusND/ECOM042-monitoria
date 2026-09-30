@@ -5,4 +5,4 @@
 /**
  * @brief The table of known commands, NULL-terminated.
  */
-extern const struct command_t commands[];
+extern const command_t commands[];

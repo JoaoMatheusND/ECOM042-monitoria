@@ -18,7 +18,8 @@ int command_run(const command_t *table, const char *name)
 
 	for (i = 0; table[i].name != NULL; i++) {
 		if (strcmp(table[i].name, name) == 0) {
-			return table[i].exec();
+			table[i].execute();
+			return 0;
 		}
 	}
 
