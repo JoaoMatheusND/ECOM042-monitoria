@@ -6,7 +6,7 @@
  * Each entry in a command table holds the name used to look the command
  * up, and a function pointer to the action that command performs.
  */
-typedef struct command {
+typedef struct {
 	const char *name;
 	void (*execute)(void);
 } command_t;
