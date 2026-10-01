@@ -7,6 +7,6 @@ typedef struct command {
 	void *ctx;
 } command_t;
 
-int command_execute(const struct command *cmd);
+int command_execute(const command_t *cmd);
 
 #endif /* COMMAND_H_ */

@@ -7,7 +7,7 @@ static void cmd_ble_execute()
 	printk("Recebido comando via BLE\n");
 }
 
-const struct command cmd_ble = {
+const command_t cmd_ble = {
 	.name = "ble",
 	.execute = cmd_ble_execute,
 	.ctx = NULL,

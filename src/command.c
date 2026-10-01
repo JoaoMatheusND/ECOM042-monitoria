@@ -3,7 +3,7 @@
 #include <errno.h>
 #include <stddef.h>
 
-int command_execute(const struct command *cmd)
+int command_execute(const command_t *cmd)
 {
 	cmd->execute();
 	return 0;
