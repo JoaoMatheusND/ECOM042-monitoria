@@ -7,7 +7,7 @@ static void cmd_uart_execute()
 	printk("Recebido comando via UART\n");
 }
 
-const command_t cmd_uart = {
+const struct command cmd_uart = {
 	.name = "uart",
 	.execute = cmd_uart_execute,
 	.ctx = NULL,
