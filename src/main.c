@@ -56,22 +56,6 @@ void f3()
 	printk("State: %s\n", State ? "True" : "False");
 }
 
-void run_commands(struct command *commands[], size_t size)
-{
-	for (size_t i = 0; i < size; i++) {
-		printk("\nCommand%d:\n", i);
-		command_run(commands[i]);
-	}
-}
-
-void destroy_commands(struct command *commands[], size_t size)
-{
-	for (size_t i = 0; i < size; i++) {
-		printk("\nCommand%d: destroyed\n", i);
-		command_destroy(commands[i]);
-	}
-}
-
 const char *firmwares[] = {"uart", "button", "timer"};
 const size_t firmwares_number = sizeof(firmwares) / sizeof(*firmwares);
 int main(void)
@@ -93,10 +77,6 @@ int main(void)
 	struct command *all_commands[] = {cmd, port_a_cmd, port_b_cmd, port_c_cmd, check_state_cmd};
 
 	size_t commands_size = sizeof(all_commands) / sizeof(struct command *);
-
-	/* printk("Size: %d\n", firmwares_number); */
-	/* run_commands(all_commands, commands_size); */
-	/* destroy_commands(all_commands, commands_size); */
 
 	for (size_t i = 0; i < firmwares_number; i++) {
 		command_dispatch(all_commands, commands_size, firmwares[i]);
