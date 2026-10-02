@@ -1,5 +1,59 @@
+cmake:
+  application:
+    configuration-dir: '/home/tl/Desktop/zephyr/zephyrproject/embedded'
+    source-dir: '/home/tl/Desktop/zephyr/zephyrproject/embedded'
+  board:
+    name: 'native_sim'
+    path:
+     - '/home/tl/Desktop/zephyr/zephyrproject/zephyr/boards/native/native_sim'
+    qualifiers: 'native/64'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/tl/Desktop/zephyr/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/home/tl/Desktop/zephyr/zephyrproject/zephyr/boards/native/native_sim/native_sim_64.dts'
+    include-dirs:
+     - '/home/tl/Desktop/zephyr/zephyrproject/modules/hal/ambiq/dts'
+     - '/home/tl/Desktop/zephyr/zephyrproject/modules/hal/atmel/include'
+     - '/home/tl/Desktop/zephyr/zephyrproject/modules/hal/bouffalolab/include'
+     - '/home/tl/Desktop/zephyr/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/home/tl/Desktop/zephyr/zephyrproject/modules/hal/gigadevice/include'
+     - '/home/tl/Desktop/zephyr/zephyrproject/modules/hal/microchip/include'
+     - '/home/tl/Desktop/zephyr/zephyrproject/modules/hal/microchip/dts'
+     - '/home/tl/Desktop/zephyr/zephyrproject/modules/hal/nuvoton/dts'
+     - '/home/tl/Desktop/zephyr/zephyrproject/modules/hal/nxp/dts'
+     - '/home/tl/Desktop/zephyr/zephyrproject/modules/hal/stm32/dts'
+     - '/home/tl/Desktop/zephyr/zephyrproject/modules/hal/ti/dts'
+     - '/home/tl/Desktop/zephyr/zephyrproject/embedded/include'
+     - '/home/tl/Desktop/zephyr/zephyrproject/zephyr/include'
+     - '/home/tl/Desktop/zephyr/zephyrproject/zephyr/include/zephyr'
+     - '/home/tl/Desktop/zephyr/zephyrproject/zephyr/dts/common'
+     - '/home/tl/Desktop/zephyr/zephyrproject/zephyr/dts/vendor'
+     - '/home/tl/Desktop/zephyr/zephyrproject/zephyr/dts/rx'
+     - '/home/tl/Desktop/zephyr/zephyrproject/zephyr/dts/x86'
+     - '/home/tl/Desktop/zephyr/zephyrproject/zephyr/dts/xtensa'
+     - '/home/tl/Desktop/zephyr/zephyrproject/zephyr/dts/sparc'
+     - '/home/tl/Desktop/zephyr/zephyrproject/zephyr/dts/riscv'
+     - '/home/tl/Desktop/zephyr/zephyrproject/zephyr/dts/posix'
+     - '/home/tl/Desktop/zephyr/zephyrproject/zephyr/dts/arm64'
+     - '/home/tl/Desktop/zephyr/zephyrproject/zephyr/dts/arm'
+     - '/home/tl/Desktop/zephyr/zephyrproject/zephyr/dts/arc'
+     - '/home/tl/Desktop/zephyr/zephyrproject/zephyr/dts'
+  kconfig:
+    files:
+     - '/home/tl/Desktop/zephyr/zephyrproject/zephyr/boards/native/native_sim/native_sim_64_defconfig'
+     - '/home/tl/Desktop/zephyr/zephyrproject/embedded/prj.conf'
+    user-files:
+     - '/home/tl/Desktop/zephyr/zephyrproject/embedded/prj.conf'
+  toolchain:
+    name: 'host'
+    path: ''
+  zephyr:
+    version: '4.4.2-rc1'
+    zephyr-base: '/home/tl/Desktop/zephyr/zephyrproject/zephyr'
+version: '0.1.0'
 west:
-  command: /nix/store/csvf7fxgbg5azgd25draymrppvyqbwvn-python3.13-west-1.5.0/bin/west
-    build -b native_sim/native/64 . -t run --pristine
-  topdir: /home/tl/Desktop/zephyr/zephyrproject
-  version: 1.5.0
+  command: '/nix/store/csvf7fxgbg5azgd25draymrppvyqbwvn-python3.13-west-1.5.0/bin/west build -b native_sim/native/64 . -t run --pristine'
+  topdir: '/home/tl/Desktop/zephyr/zephyrproject'
+  version: '1.5.0'

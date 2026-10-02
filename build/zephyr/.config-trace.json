@@ -267,122 +267,155 @@
     "CONFIG_INPUT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      31
+    ]
   ],
   [
     "CONFIG_WIFI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      32
+    ]
   ],
   [
     "CONFIG_MAIN_STACK_SIZE",
     "y",
     "int",
     "1024",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      164
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      33
     ]
   ],
   [
     "CONFIG_REGULATOR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      34
+    ]
   ],
   [
     "CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE",
     "y",
     "int",
     "1024",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      607
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      35
     ]
   ],
   [
     "CONFIG_FPU",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      36
+    ]
   ],
   [
     "CONFIG_SERIAL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      37
+    ]
   ],
   [
     "CONFIG_SPI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      38
+    ]
   ],
   [
     "CONFIG_MIPI_DSI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      39
+    ]
   ],
   [
     "CONFIG_MEMC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      40
+    ]
   ],
   [
     "CONFIG_MODEM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      41
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_BIN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      42
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_EXE",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/boards/native/native_sim/Kconfig.defconfig",
-      10
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      43
     ]
   ],
   [
     "CONFIG_OUTPUT_PRINT_MEMORY_USAGE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      44
+    ]
   ],
   [
     "CONFIG_POSIX_ARCH_CONSOLE",
@@ -401,8 +434,8 @@
     "1000000",
     "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/boards/native/native_sim/native_sim_64_defconfig",
-      4
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      46
     ]
   ],
   [
@@ -410,10 +443,10 @@
     "y",
     "int",
     "2048",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/arch/Kconfig",
-      262
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      47
     ]
   ],
   [
@@ -421,10 +454,10 @@
     "y",
     "hex",
     "0x0",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/arch/Kconfig",
-      271
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      48
     ]
   ],
   [
@@ -432,29 +465,32 @@
     "y",
     "int",
     "1",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig.smp",
-      43
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      49
     ]
   ],
   [
     "CONFIG_SOC_RESET_HOOK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      50
+    ]
   ],
   [
     "CONFIG_IDLE_STACK_SIZE",
     "y",
     "int",
     "256",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      179
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      51
     ]
   ],
   [
@@ -462,29 +498,32 @@
     "y",
     "int",
     "2048",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      188
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      52
     ]
   ],
   [
     "CONFIG_CLOCK_CONTROL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      53
+    ]
   ],
   [
     "CONFIG_SYS_CLOCK_TICKS_PER_SEC",
     "y",
     "int",
     "100",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      828
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      54
     ]
   ],
   [
@@ -492,10 +531,10 @@
     "y",
     "hex",
     "0",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      165
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      55
     ]
   ],
   [
@@ -503,61 +542,76 @@
     "y",
     "string",
     "__start",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      237
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      56
     ]
   ],
   [
     "CONFIG_XIP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      57
+    ]
   ],
   [
     "CONFIG_COUNTER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      58
+    ]
   ],
   [
     "CONFIG_PM_DEVICE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      59
+    ]
   ],
   [
     "CONFIG_OTP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      60
+    ]
   ],
   [
     "CONFIG_NVMEM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      61
+    ]
   ],
   [
     "CONFIG_TICKLESS_KERNEL",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      1090
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      62
     ]
   ],
   [
@@ -565,72 +619,87 @@
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      97
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      63
     ]
   ],
   [
     "CONFIG_POWER_DOMAIN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      64
+    ]
   ],
   [
     "CONFIG_NUM_PREEMPT_PRIORITIES",
     "y",
     "int",
     "15",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      55
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      65
     ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_HEX",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      66
+    ]
   ],
   [
     "CONFIG_DYNAMIC_INTERRUPTS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      67
+    ]
   ],
   [
     "CONFIG_GEN_ISR_TABLES",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      68
+    ]
   ],
   [
     "CONFIG_INIT_STACKS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      69
+    ]
   ],
   [
     "CONFIG_TIMESLICE_SIZE",
     "y",
     "int",
     "20",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      689
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      70
     ]
   ],
   [
@@ -638,19 +707,22 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      865
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      71
     ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_S19",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      72
+    ]
   ],
   [
     "CONFIG_ARCH_HAS_CUSTOM_BUSY_WAIT",
@@ -666,105 +738,144 @@
     "CONFIG_FLASH",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      74
+    ]
   ],
   [
     "CONFIG_SYSTEM_TIMER_RESET_BY_LPM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      75
+    ]
   ],
   [
     "CONFIG_GPIO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      76
+    ]
   ],
   [
     "CONFIG_SYSTEM_CLOCK_HW_CYCLES_PER_SEC_RUNTIME_UPDATE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      77
+    ]
   ],
   [
     "CONFIG_MFD",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      78
+    ]
   ],
   [
     "CONFIG_CACHE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      79
+    ]
   ],
   [
     "CONFIG_LOG",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      80
+    ]
   ],
   [
     "CONFIG_PM_CPU_OPS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      81
+    ]
   ],
   [
     "CONFIG_RESET",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      82
+    ]
   ],
   [
     "CONFIG_ASSERT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      83
+    ]
   ],
   [
     "CONFIG_DEVICE_DEPS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      84
+    ]
   ],
   [
     "CONFIG_SYSCON",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      85
+    ]
   ],
   [
     "CONFIG_SOC_EARLY_INIT_HOOK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      86
+    ]
   ],
   [
     "CONFIG_CONSOLE",
@@ -773,25 +884,31 @@
     "y",
     "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/boards/native/native_sim/native_sim_64_defconfig",
-      3
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      87
     ]
   ],
   [
     "CONFIG_WINSTREAM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      88
+    ]
   ],
   [
     "CONFIG_REBOOT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      89
+    ]
   ],
   [
     "CONFIG_SRAM_OFFSET",
@@ -808,27 +925,33 @@
     "CONFIG_BOOTLOADER_MCUBOOT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      91
+    ]
   ],
   [
     "CONFIG_SCHED_CPU_MASK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      92
+    ]
   ],
   [
     "CONFIG_KERNEL_MEM_POOL",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      771
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      93
     ]
   ],
   [
@@ -846,44 +969,56 @@
     "CONFIG_OUTPUT_DISASSEMBLY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      95
+    ]
   ],
   [
     "CONFIG_LINKER_USE_RELAX",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      349
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      96
     ]
   ],
   [
     "CONFIG_WATCHDOG",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      97
+    ]
   ],
   [
     "CONFIG_BUILD_ONLY_NO_BLOBS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      102
+    ]
   ],
   [
     "CONFIG_ACPI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      115
+    ]
   ],
   [
     "CONFIG_ZEPHYR_ACPICA_MODULE",
@@ -922,9 +1057,12 @@
     "CONFIG_CMSIS_DSP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      131
+    ]
   ],
   [
     "CONFIG_ZEPHYR_CMSIS_NN_MODULE",
@@ -1040,9 +1178,12 @@
     "CONFIG_ETHOS_U",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      189
+    ]
   ],
   [
     "CONFIG_ZEPHYR_HAL_ETHOS_U_MODULE",
@@ -1081,9 +1222,12 @@
     "CONFIG_USE_INFINEON_ABSTRACTION_RTOS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      203
+    ]
   ],
   [
     "CONFIG_ZEPHYR_HAL_INTEL_MODULE",
@@ -1177,209 +1321,287 @@
     "CONFIG_REALTEK_BEE_ADC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      239
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_CAN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      240
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_CODEC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      241
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_DMA",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      242
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_GPIO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      243
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_I2C",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      244
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_I2S",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      245
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_IR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      246
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_KEYSCAN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      247
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_MAC_802154",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      248
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_NVIC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      249
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_PINMUX",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      250
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_AON_QDEC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      251
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_QDEC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      252
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_RCC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      253
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_RTC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      254
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_SDHC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      255
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_SPI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      256
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_TIM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      257
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_ENHTIM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      258
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_UART",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      259
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_USB",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      260
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_USING_USB_HAL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      261
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_AON_WDT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      262
+    ]
   ],
   [
     "CONFIG_REALTEK_BEE_CORE_WDT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      263
+    ]
   ],
   [
     "CONFIG_USE_REALTEK_BEE_OS_INTERFACE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      266
+    ]
   ],
   [
     "CONFIG_ZEPHYR_HAL_RENESAS_MODULE",
@@ -1462,9 +1684,12 @@
     "CONFIG_TDK_HAL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      305
+    ]
   ],
   [
     "CONFIG_ZEPHYR_HAL_TELINK_MODULE",
@@ -1525,9 +1750,12 @@
     "CONFIG_WIFI_NM_WPA_SUPPLICANT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      329
+    ]
   ],
   [
     "CONFIG_ZEPHYR_HOSTAP_MODULE",
@@ -1588,9 +1816,12 @@
     "CONFIG_LIBSBC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      346
+    ]
   ],
   [
     "CONFIG_ZEPHYR_LITTLEFS_MODULE",
@@ -1629,9 +1860,12 @@
     "CONFIG_HAS_SEMTECH_RADIO_DRIVERS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      365
+    ]
   ],
   [
     "CONFIG_ZEPHYR_LVGL_MODULE",
@@ -1670,17 +1904,23 @@
     "CONFIG_PSA_CRYPTO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      379
+    ]
   ],
   [
     "CONFIG_MBEDTLS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      380
+    ]
   ],
   [
     "CONFIG_ZEPHYR_MBEDTLS_3_6_MODULE",
@@ -1741,9 +1981,12 @@
     "CONFIG_NANOPB",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      392
+    ]
   ],
   [
     "CONFIG_ZEPHYR_NRF_WIFI_MODULE",
@@ -1760,9 +2003,12 @@
     "CONFIG_NRF70_BUSLIB",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      399
+    ]
   ],
   [
     "CONFIG_ZEPHYR_OPEN_AMP_MODULE",
@@ -1779,9 +2025,12 @@
     "CONFIG_OPENTHREAD",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      407
+    ]
   ],
   [
     "CONFIG_ZEPHYR_OPENTHREAD_MODULE",
@@ -1798,9 +2047,12 @@
     "CONFIG_PERCEPIO_DFM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      418
+    ]
   ],
   [
     "CONFIG_ZEPHYR_PERCEPIO_MODULE",
@@ -1817,9 +2069,12 @@
     "CONFIG_PICOLIBC_MODULE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      425
+    ]
   ],
   [
     "CONFIG_ZEPHYR_PICOLIBC_MODULE",
@@ -1891,9 +2146,12 @@
     "CONFIG_BUILD_WITH_TFA",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      444
+    ]
   ],
   [
     "CONFIG_ZEPHYR_TRUSTED_FIRMWARE_M_MODULE",
@@ -1932,9 +2190,12 @@
     "CONFIG_ZCBOR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      463
+    ]
   ],
   [
     "CONFIG_ZEPHYR_NRF_HW_MODELS_MODULE",
@@ -1951,73 +2212,100 @@
     "CONFIG_LIBMETAL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      467
+    ]
   ],
   [
     "CONFIG_LVGL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      468
+    ]
   ],
   [
     "CONFIG_HAS_MEC_HAL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      469
+    ]
   ],
   [
     "CONFIG_HAS_MPFS_HAL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      470
+    ]
   ],
   [
     "CONFIG_HAS_MEC5_HAL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      471
+    ]
   ],
   [
     "CONFIG_OPENAMP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      472
+    ]
   ],
   [
     "CONFIG_MIPI_SYST_LIB",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      473
+    ]
   ],
   [
     "CONFIG_HAS_TELINK_DRIVERS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      474
+    ]
   ],
   [
     "CONFIG_MCUBOOT_BOOTUTIL_LIB",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      475
+    ]
   ],
   [
     "CONFIG_BOARD",
@@ -2056,9 +2344,12 @@
     "CONFIG_NET_DRIVERS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      497
+    ]
   ],
   [
     "CONFIG_BOARD_NATIVE_SIM",
@@ -2098,19 +2389,22 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/boards/native/native_sim/Kconfig",
-      22
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      509
     ]
   ],
   [
     "CONFIG_NATIVE_EXTRA_CMDLINE_ARGS",
     "y",
     "string",
-    null,
-    "unset",
-    null
+    "",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      510
+    ]
   ],
   [
     "CONFIG_SOC",
@@ -2137,27 +2431,33 @@
     "CONFIG_HWINFO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      518
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_INFO_HEADER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      519
+    ]
   ],
   [
     "CONFIG_NATIVE_SIMULATOR_MCU_N",
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/soc/native/inf_clock/Kconfig",
-      14
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      520
     ]
   ],
   [
@@ -2165,10 +2465,10 @@
     "y",
     "int",
     "1",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/soc/native/inf_clock/Kconfig",
-      21
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      521
     ]
   ],
   [
@@ -2176,35 +2476,44 @@
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/soc/native/inf_clock/Kconfig",
-      27
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      522
     ]
   ],
   [
     "CONFIG_NATIVE_SIMULATOR_EXTRA_IMAGE_PATHS",
     "y",
     "string",
-    null,
-    "unset",
-    null
+    "",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      523
+    ]
   ],
   [
     "CONFIG_NATIVE_SIMULATOR_AUTOSTART_MCU",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      524
+    ]
   ],
   [
     "CONFIG_NATIVE_SIMULATOR_STATIC_LINKING",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      525
+    ]
   ],
   [
     "CONFIG_ARCH",
@@ -2232,17 +2541,23 @@
     "CONFIG_ARCH_POSIX_LIBFUZZER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      534
+    ]
   ],
   [
     "CONFIG_ARCH_POSIX_TRAP_ON_FATAL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      535
+    ]
   ],
   [
     "CONFIG_ARCH_POSIX",
@@ -2268,9 +2583,12 @@
     "CONFIG_EXCEPTION_DUMP_HOOK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      544
+    ]
   ],
   [
     "CONFIG_LITTLE_ENDIAN",
@@ -2298,10 +2616,10 @@
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/arch/Kconfig",
-      231
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      547
     ]
   ],
   [
@@ -2309,73 +2627,88 @@
     "y",
     "hex",
     "0x0",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/arch/Kconfig",
-      239
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      548
     ]
   ],
   [
     "CONFIG_NOINIT_SNIPPET_FIRST",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      549
+    ]
   ],
   [
     "CONFIG_STACK_GROWS_UP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      550
+    ]
   ],
   [
     "CONFIG_FRAME_POINTER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      551
+    ]
   ],
   [
     "CONFIG_ARCH_DEVICE_STATE_ALIGN",
     "y",
     "int",
     "4",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/arch/Kconfig",
-      573
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      556
     ]
   ],
   [
     "CONFIG_SRAM_SW_ISR_TABLE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      557
+    ]
   ],
   [
     "CONFIG_EXCEPTION_DEBUG",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/arch/Kconfig",
-      664
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      558
     ]
   ],
   [
     "CONFIG_SIMPLIFIED_EXCEPTION_CODES",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      559
+    ]
   ],
   [
     "CONFIG_ARCH_HAS_THREAD_ABORT",
@@ -2401,9 +2734,12 @@
     "CONFIG_CACHE_DOUBLEMAP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      579
+    ]
   ],
   [
     "CONFIG_TOOLCHAIN_HAS_BUILTIN_FFS",
@@ -2431,10 +2767,10 @@
     "y",
     "int",
     "16",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      30
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      588
     ]
   ],
   [
@@ -2442,10 +2778,10 @@
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      73
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      589
     ]
   ],
   [
@@ -2475,46 +2811,52 @@
     "y",
     "int",
     "-128",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      86
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      592
     ]
   ],
   [
     "CONFIG_SCHED_DEADLINE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      593
+    ]
   ],
   [
     "CONFIG_THREAD_STACK_INFO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      594
+    ]
   ],
   [
     "CONFIG_THREAD_CUSTOM_DATA",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      595
+    ]
   ],
   [
     "CONFIG_SCHED_SIMPLE",
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      305
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_SCHED_SCALABLE",
@@ -2545,30 +2887,30 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      358
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_ERRNO",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      395
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      605
     ]
   ],
   [
     "CONFIG_NONZERO_SPINLOCK_SIZE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      606
+    ]
   ],
   [
     "CONFIG_SKIP_BSS_CLEAR",
@@ -2585,10 +2927,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      455
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      613
     ]
   ],
   [
@@ -2596,10 +2938,10 @@
     "y",
     "string",
     "Booting Zephyr OS build",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      464
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      614
     ]
   ],
   [
@@ -2607,95 +2949,119 @@
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      471
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      615
     ]
   ],
   [
     "CONFIG_BOOT_CLEAR_SCREEN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      616
+    ]
   ],
   [
     "CONFIG_THREAD_MONITOR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      617
+    ]
   ],
   [
     "CONFIG_THREAD_NAME",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      618
+    ]
   ],
   [
     "CONFIG_THREAD_RUNTIME_STATS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      619
+    ]
   ],
   [
     "CONFIG_THREAD_RUNTIME_STACK_SAFETY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      620
+    ]
   ],
   [
     "CONFIG_OBJ_CORE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      623
+    ]
   ],
   [
     "CONFIG_WORKQUEUE_WORK_TIMEOUT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      624
+    ]
   ],
   [
     "CONFIG_SYSTEM_WORKQUEUE_PRIORITY",
     "y",
     "int",
     "-1",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      613
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      629
     ]
   ],
   [
     "CONFIG_SYSTEM_WORKQUEUE_NO_YIELD",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      630
+    ]
   ],
   [
     "CONFIG_SYSTEM_WORKQUEUE_WORK_TIMEOUT_MS",
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
       631
     ]
   ],
@@ -2724,10 +3090,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      681
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      649
     ]
   ],
   [
@@ -2735,89 +3101,110 @@
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      700
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      650
     ]
   ],
   [
     "CONFIG_TIMESLICE_PER_THREAD",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      651
+    ]
   ],
   [
     "CONFIG_TIMER_OBSERVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      652
+    ]
   ],
   [
     "CONFIG_POLL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      658
+    ]
   ],
   [
     "CONFIG_MEM_SLAB_POINTER_VALIDATE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      659
+    ]
   ],
   [
     "CONFIG_MEM_SLAB_TRACE_MAX_UTILIZATION",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      660
+    ]
   ],
   [
     "CONFIG_NUM_MBOX_ASYNC_MSGS",
     "y",
     "int",
     "10",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      749
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      661
     ]
   ],
   [
     "CONFIG_EVENTS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      662
+    ]
   ],
   [
     "CONFIG_HEAP_MEM_POOL_SIZE",
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      781
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      663
     ]
   ],
   [
     "CONFIG_HEAP_MEM_POOL_IGNORE_MIN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      664
+    ]
   ],
   [
     "CONFIG_ARCH_HAS_THREAD_NAME_HOOK",
@@ -2834,10 +3221,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      875
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      668
     ]
   ],
   [
@@ -2845,19 +3232,22 @@
     "y",
     "int",
     "365",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      886
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      669
     ]
   ],
   [
     "CONFIG_TICKET_SPINLOCKS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      684
+    ]
   ],
   [
     "CONFIG_TOOLCHAIN_SUPPORTS_STATIC_INIT_GNU",
@@ -2875,53 +3265,65 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig",
-      1124
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      688
     ]
   ],
   [
     "CONFIG_BOOTARGS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      689
+    ]
   ],
   [
     "CONFIG_DEVICE_MUTABLE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      695
+    ]
   ],
   [
     "CONFIG_DEVICE_DT_METADATA",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      696
+    ]
   ],
   [
     "CONFIG_DEVICE_DEINIT_SUPPORT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      697
+    ]
   ],
   [
     "CONFIG_KERNEL_INIT_PRIORITY_OBJECTS",
     "y",
     "int",
     "30",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig.device",
-      50
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      703
     ]
   ],
   [
@@ -2929,10 +3331,10 @@
     "y",
     "int",
     "35",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig.device",
-      58
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      704
     ]
   ],
   [
@@ -2940,10 +3342,10 @@
     "y",
     "int",
     "40",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig.device",
-      66
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      705
     ]
   ],
   [
@@ -2951,10 +3353,10 @@
     "y",
     "int",
     "50",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig.device",
-      72
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      706
     ]
   ],
   [
@@ -2962,133 +3364,175 @@
     "y",
     "int",
     "90",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/kernel/Kconfig.device",
-      80
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      707
     ]
   ],
   [
     "CONFIG_SOC_EARLY_RESET_HOOK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      723
+    ]
   ],
   [
     "CONFIG_SOC_PREP_HOOK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      724
+    ]
   ],
   [
     "CONFIG_SOC_LATE_INIT_HOOK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      725
+    ]
   ],
   [
     "CONFIG_SOC_PER_CORE_INIT_HOOK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      726
+    ]
   ],
   [
     "CONFIG_BOARD_EARLY_INIT_HOOK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      727
+    ]
   ],
   [
     "CONFIG_BOARD_LATE_INIT_HOOK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      728
+    ]
   ],
   [
     "CONFIG_ADC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      734
+    ]
   ],
   [
     "CONFIG_AUDIO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      735
+    ]
   ],
   [
     "CONFIG_AUXDISPLAY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      736
+    ]
   ],
   [
     "CONFIG_BBRAM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      737
+    ]
   ],
   [
     "CONFIG_BIOMETRICS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      738
+    ]
   ],
   [
     "CONFIG_CAN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      739
+    ]
   ],
   [
     "CONFIG_CHARGER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      740
+    ]
   ],
   [
     "CONFIG_COMPARATOR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      741
+    ]
   ],
   [
     "CONFIG_CONSOLE_INPUT_MAX_LINE_LEN",
     "y",
     "int",
     "128",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/drivers/console/Kconfig",
-      16
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      742
     ]
   ],
   [
@@ -3106,53 +3550,65 @@
     "y",
     "int",
     "40",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/drivers/console/Kconfig",
-      38
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      744
     ]
   ],
   [
     "CONFIG_RAM_CONSOLE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      745
+    ]
   ],
   [
     "CONFIG_IPM_CONSOLE_SENDER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      746
+    ]
   ],
   [
     "CONFIG_IPM_CONSOLE_RECEIVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      747
+    ]
   ],
   [
     "CONFIG_UART_MCUMGR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      748
+    ]
   ],
   [
     "CONFIG_POSIX_ARCH_CONSOLE_INIT_PRIORITY",
     "y",
     "int",
     "99",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/drivers/console/Kconfig",
-      264
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      749
     ]
   ],
   [
@@ -3160,414 +3616,561 @@
     "y",
     "int",
     "256",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/drivers/console/Kconfig",
-      271
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      750
     ]
   ],
   [
     "CONFIG_EFI_CONSOLE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      751
+    ]
   ],
   [
     "CONFIG_COREDUMP_DEVICE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      752
+    ]
   ],
   [
     "CONFIG_CRC_DRIVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      753
+    ]
   ],
   [
     "CONFIG_CRYPTO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      754
+    ]
   ],
   [
     "CONFIG_DAC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      755
+    ]
   ],
   [
     "CONFIG_DAI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      756
+    ]
   ],
   [
     "CONFIG_DEBUG_DRIVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      757
+    ]
   ],
   [
     "CONFIG_DISK_DRIVERS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      758
+    ]
   ],
   [
     "CONFIG_DISPLAY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      759
+    ]
   ],
   [
     "CONFIG_DMA",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      760
+    ]
   ],
   [
     "CONFIG_DP_DRIVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      761
+    ]
   ],
   [
     "CONFIG_EDAC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      762
+    ]
   ],
   [
     "CONFIG_EEPROM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      763
+    ]
   ],
   [
     "CONFIG_ENTROPY_GENERATOR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      764
+    ]
   ],
   [
     "CONFIG_ESPI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      765
+    ]
   ],
   [
     "CONFIG_MDIO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      766
+    ]
   ],
   [
     "CONFIG_FPGA",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      773
+    ]
   ],
   [
     "CONFIG_FUEL_GAUGE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      774
+    ]
   ],
   [
     "CONFIG_GNSS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      775
+    ]
   ],
   [
     "CONFIG_HAPTICS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      776
+    ]
   ],
   [
     "CONFIG_HWSPINLOCK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      777
+    ]
   ],
   [
     "CONFIG_I2C",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      778
+    ]
   ],
   [
     "CONFIG_I2S",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      779
+    ]
   ],
   [
     "CONFIG_I3C",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      780
+    ]
   ],
   [
     "CONFIG_INTC_INIT_PRIORITY",
     "y",
     "int",
     "40",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/drivers/interrupt_controller/Kconfig",
-      45
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      785
     ]
   ],
   [
     "CONFIG_IPM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      788
+    ]
   ],
   [
     "CONFIG_LED",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      789
+    ]
   ],
   [
     "CONFIG_LED_STRIP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      790
+    ]
   ],
   [
     "CONFIG_LORA",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      791
+    ]
   ],
   [
     "CONFIG_MBOX",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      792
+    ]
   ],
   [
     "CONFIG_MIPI_DBI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      793
+    ]
   ],
   [
     "CONFIG_TIMEAWARE_GPIO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      804
+    ]
   ],
   [
     "CONFIG_MM_DRV",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      807
+    ]
   ],
   [
     "CONFIG_MSPI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      808
+    ]
   ],
   [
     "CONFIG_OPAMP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      809
+    ]
   ],
   [
     "CONFIG_PCIE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      810
+    ]
   ],
   [
     "CONFIG_PCIE_ENDPOINT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      811
+    ]
   ],
   [
     "CONFIG_PECI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      812
+    ]
   ],
   [
     "CONFIG_PINCTRL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      813
+    ]
   ],
   [
     "CONFIG_PS2",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      814
+    ]
   ],
   [
     "CONFIG_PSI5",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      815
+    ]
   ],
   [
     "CONFIG_PTP_CLOCK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      816
+    ]
   ],
   [
     "CONFIG_PWM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      817
+    ]
   ],
   [
     "CONFIG_RETAINED_MEM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      818
+    ]
   ],
   [
     "CONFIG_RTC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      819
+    ]
   ],
   [
     "CONFIG_SDHC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      820
+    ]
   ],
   [
     "CONFIG_SENSOR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      821
+    ]
   ],
   [
     "CONFIG_SENT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      822
+    ]
   ],
   [
     "CONFIG_SMBUS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      823
+    ]
   ],
   [
     "CONFIG_STEPPER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      824
+    ]
   ],
   [
     "CONFIG_TIMER_HAS_64BIT_CYCLE_COUNTER",
@@ -3583,27 +4186,33 @@
     "CONFIG_TIMER_READS_ITS_FREQUENCY_AT_RUNTIME",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      830
+    ]
   ],
   [
     "CONFIG_SYSTEM_CLOCK_SLOPPY_IDLE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      831
+    ]
   ],
   [
     "CONFIG_SYSTEM_CLOCK_INIT_PRIORITY",
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/drivers/timer/Kconfig",
-      55
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      832
     ]
   ],
   [
@@ -3640,147 +4249,198 @@
     "CONFIG_UAOL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      838
+    ]
   ],
   [
     "CONFIG_USB_BC12",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      839
+    ]
   ],
   [
     "CONFIG_UDC_DRIVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      840
+    ]
   ],
   [
     "CONFIG_UHC_DRIVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      841
+    ]
   ],
   [
     "CONFIG_UVB",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      842
+    ]
   ],
   [
     "CONFIG_USB_DEVICE_DRIVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      843
+    ]
   ],
   [
     "CONFIG_USBC_TCPC_DRIVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      850
+    ]
   ],
   [
     "CONFIG_USBC_VBUS_DRIVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      851
+    ]
   ],
   [
     "CONFIG_USBC_PPC_DRIVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      852
+    ]
   ],
   [
     "CONFIG_VIDEO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      853
+    ]
   ],
   [
     "CONFIG_VIRTIO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      854
+    ]
   ],
   [
     "CONFIG_VIRTUALIZATION",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      855
+    ]
   ],
   [
     "CONFIG_W1",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      856
+    ]
   ],
   [
     "CONFIG_WUC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      857
+    ]
   ],
   [
     "CONFIG_TEE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      858
+    ]
   ],
   [
     "CONFIG_REQUIRES_FULL_LIBC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      861
+    ]
   ],
   [
     "CONFIG_REQUIRES_FLOAT_PRINTF",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      862
+    ]
   ],
   [
     "CONFIG_LIBC_ALLOW_LESS_THAN_64BIT_TIME",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/lib/libc/Kconfig",
-      23
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      863
     ]
   ],
   [
@@ -3837,129 +4497,162 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/lib/libc/Kconfig",
-      80
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_COMMON_LIBC_ASCTIME_R",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      874
+    ]
   ],
   [
     "CONFIG_COMMON_LIBC_CTIME_R",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      875
+    ]
   ],
   [
     "CONFIG_COMMON_LIBC_MALLOC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      876
+    ]
   ],
   [
     "CONFIG_COMMON_LIBC_REMOVE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      877
+    ]
   ],
   [
     "CONFIG_CPP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      883
+    ]
   ],
   [
     "CONFIG_SYS_HASH_FUNC32",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      893
+    ]
   ],
   [
     "CONFIG_SYS_HASH_MAP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      899
+    ]
   ],
   [
     "CONFIG_SYS_HEAP_VALIDATE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      905
+    ]
   ],
   [
     "CONFIG_SYS_HEAP_STRESS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      906
+    ]
   ],
   [
     "CONFIG_SYS_HEAP_INFO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      907
+    ]
   ],
   [
     "CONFIG_SYS_HEAP_ALLOC_LOOPS",
     "y",
     "int",
     "3",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/lib/heap/Kconfig",
-      35
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      908
     ]
   ],
   [
     "CONFIG_SYS_HEAP_RUNTIME_STATS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      909
+    ]
   ],
   [
     "CONFIG_SYS_HEAP_ARRAY_SIZE",
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/lib/heap/Kconfig",
-      56
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      910
     ]
   ],
   [
     "CONFIG_SYS_HEAP_LISTENER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      911
+    ]
   ],
   [
     "CONFIG_SYS_HEAP_HARDENING_NONE",
@@ -3974,11 +4667,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/lib/heap/Kconfig",
-      83
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_SYS_HEAP_HARDENING_MODERATE",
@@ -4019,84 +4709,108 @@
     "CONFIG_MULTI_HEAP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      918
+    ]
   ],
   [
     "CONFIG_SHARED_MULTI_HEAP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      919
+    ]
   ],
   [
     "CONFIG_SYS_MEM_BLOCKS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      925
+    ]
   ],
   [
     "CONFIG_MIDI2_UMP_STREAM_RESPONDER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      931
+    ]
   ],
   [
     "CONFIG_NET_BUF",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      934
+    ]
   ],
   [
     "CONFIG_ZVFS_OPEN_IGNORE_MIN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      939
+    ]
   ],
   [
     "CONFIG_PRINTK_SYNC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      940
+    ]
   ],
   [
     "CONFIG_MPSC_PBUF",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      941
+    ]
   ],
   [
     "CONFIG_SPSC_PBUF",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      942
+    ]
   ],
   [
     "CONFIG_CBPRINTF_COMPLETE",
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/lib/os/Kconfig.cbprintf",
-      6
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_CBPRINTF_NANO",
@@ -4111,11 +4825,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/lib/os/Kconfig.cbprintf",
-      29
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_CBPRINTF_REDUCED_INTEGRAL",
@@ -4129,60 +4840,78 @@
     "CONFIG_CBPRINTF_FP_SUPPORT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      947
+    ]
   ],
   [
     "CONFIG_CBPRINTF_FP_A_SUPPORT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      948
+    ]
   ],
   [
     "CONFIG_CBPRINTF_FP_ALWAYS_A",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      949
+    ]
   ],
   [
     "CONFIG_CBPRINTF_N_SPECIFIER",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/lib/os/Kconfig.cbprintf",
-      107
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      950
     ]
   ],
   [
     "CONFIG_CBPRINTF_LIBC_SUBSTS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      951
+    ]
   ],
   [
     "CONFIG_CBPRINTF_PACKAGE_LONGDOUBLE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      952
+    ]
   ],
   [
     "CONFIG_CBPRINTF_STATIC_PACKAGE_CHECK_ALIGNMENT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      953
+    ]
   ],
   [
     "CONFIG_CBPRINTF_CONVERT_CHECK_PTR",
@@ -4199,33 +4928,45 @@
     "CONFIG_ZVFS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      955
+    ]
   ],
   [
     "CONFIG_CPU_LOAD_METRIC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      956
+    ]
   ],
   [
     "CONFIG_POSIX_SYSTEM_INTERFACES",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      962
+    ]
   ],
   [
     "CONFIG_POSIX_API",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      963
+    ]
   ],
   [
     "CONFIG_POSIX_AEP_CHOICE_NONE",
@@ -4240,11 +4981,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/lib/posix/Kconfig.profile",
-      29
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_POSIX_AEP_CHOICE_BASE",
@@ -4312,36 +5050,42 @@
     "CONFIG_EVENTFD",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      980
+    ]
   ],
   [
     "CONFIG_SMF",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      981
+    ]
   ],
   [
     "CONFIG_LIBGCC_RTLIB",
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/lib/runtime/Kconfig",
-      13
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_JSON_LIBRARY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      987
+    ]
   ],
   [
     "CONFIG_RING_BUFFER",
@@ -4357,49 +5101,67 @@
     "CONFIG_RING_BUFFER_LARGE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      989
+    ]
   ],
   [
     "CONFIG_NOTIFY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      990
+    ]
   ],
   [
     "CONFIG_BASE64",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      991
+    ]
   ],
   [
     "CONFIG_ONOFF",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      992
+    ]
   ],
   [
     "CONFIG_UTF8",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      993
+    ]
   ],
   [
     "CONFIG_COBS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      994
+    ]
   ],
   [
     "CONFIG_GETOPT",
@@ -4415,60 +5177,78 @@
     "CONFIG_GETOPT_LONG",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      996
+    ]
   ],
   [
     "CONFIG_TIMEUTIL_APPLY_SKEW",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/lib/utils/Kconfig",
-      119
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      997
     ]
   ],
   [
     "CONFIG_UUID",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1003
+    ]
   ],
   [
     "CONFIG_MIN_HEAP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1006
+    ]
   ],
   [
     "CONFIG_BINDESC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1012
+    ]
   ],
   [
     "CONFIG_BT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1013
+    ]
   ],
   [
     "CONFIG_CONSOLE_SUBSYS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1020
+    ]
   ],
   [
     "CONFIG_HAS_CPU_FREQ",
@@ -4484,81 +5264,111 @@
     "CONFIG_CPU_FREQ",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1022
+    ]
   ],
   [
     "CONFIG_CRC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1023
+    ]
   ],
   [
     "CONFIG_DAP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1024
+    ]
   ],
   [
     "CONFIG_DEBUG",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1034
+    ]
   ],
   [
     "CONFIG_GPROF",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1035
+    ]
   ],
   [
     "CONFIG_ASAN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1036
+    ]
   ],
   [
     "CONFIG_UBSAN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1037
+    ]
   ],
   [
     "CONFIG_MSAN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1038
+    ]
   ],
   [
     "CONFIG_STACK_USAGE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1039
+    ]
   ],
   [
     "CONFIG_STACK_SENTINEL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1040
+    ]
   ],
   [
     "CONFIG_PRINTK",
@@ -4584,310 +5394,418 @@
     "CONFIG_FORCE_NO_ASSERT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1043
+    ]
   ],
   [
     "CONFIG_ASSERT_VERBOSE",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/subsys/debug/Kconfig",
-      240
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1044
     ]
   ],
   [
     "CONFIG_ASSERT_NO_FILE_INFO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1045
+    ]
   ],
   [
     "CONFIG_ASSERT_NO_COND_INFO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1046
+    ]
   ],
   [
     "CONFIG_ASSERT_NO_MSG_INFO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1047
+    ]
   ],
   [
     "CONFIG_ASSERT_TEST",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1048
+    ]
   ],
   [
     "CONFIG_OVERRIDE_FRAME_POINTER_DEFAULT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1049
+    ]
   ],
   [
     "CONFIG_DEBUG_THREAD_INFO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1050
+    ]
   ],
   [
     "CONFIG_SYMTAB",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1051
+    ]
   ],
   [
     "CONFIG_MIPI_STP_DECODER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1054
+    ]
   ],
   [
     "CONFIG_CS_TRACE_DEFMT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1055
+    ]
   ],
   [
     "CONFIG_DISK_ACCESS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1056
+    ]
   ],
   [
     "CONFIG_DSP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1057
+    ]
   ],
   [
     "CONFIG_EMUL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1058
+    ]
   ],
   [
     "CONFIG_CHARACTER_FRAMEBUFFER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1059
+    ]
   ],
   [
     "CONFIG_FILE_SYSTEM_LIB_LINK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1064
+    ]
   ],
   [
     "CONFIG_FILE_SYSTEM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1065
+    ]
   ],
   [
     "CONFIG_GNSS_RTK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1068
+    ]
   ],
   [
     "CONFIG_INSTRUMENTATION",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1069
+    ]
   ],
   [
     "CONFIG_RPMSG_SERVICE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1074
+    ]
   ],
   [
     "CONFIG_IPC_SERVICE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1075
+    ]
   ],
   [
     "CONFIG_OPENAMP_RSC_TABLE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1076
+    ]
   ],
   [
     "CONFIG_JWT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1079
+    ]
   ],
   [
     "CONFIG_ZMS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1084
+    ]
   ],
   [
     "CONFIG_LLEXT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1087
+    ]
   ],
   [
     "CONFIG_LLEXT_EDK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1088
+    ]
   ],
   [
     "CONFIG_LOG_OUTPUT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1093
+    ]
   ],
   [
     "CONFIG_MEM_ATTR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1096
+    ]
   ],
   [
     "CONFIG_EC_HOST_CMD",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1105
+    ]
   ],
   [
     "CONFIG_OSDP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1108
+    ]
   ],
   [
     "CONFIG_MODBUS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1111
+    ]
   ],
   [
     "CONFIG_MODEM_MODULES",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1112
+    ]
   ],
   [
     "CONFIG_NETWORKING",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1117
+    ]
   ],
   [
     "CONFIG_PM_POLICY_LATENCY_STANDALONE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1123
+    ]
   ],
   [
     "CONFIG_MCTP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1129
+    ]
   ],
   [
     "CONFIG_PROFILING",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1137
+    ]
   ],
   [
     "CONFIG_TEST_RANDOM_GENERATOR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1142
+    ]
   ],
   [
     "CONFIG_TIMER_RANDOM_INITIAL_STATE",
     "y",
     "int",
     "123456789",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/subsys/random/Kconfig",
-      33
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1143
     ]
   ],
   [
@@ -4905,137 +5823,188 @@
     "CONFIG_CSPRNG_NEEDED",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1145
+    ]
   ],
   [
     "CONFIG_RTIO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1148
+    ]
   ],
   [
     "CONFIG_MMC_STACK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1153
+    ]
   ],
   [
     "CONFIG_SDMMC_STACK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1154
+    ]
   ],
   [
     "CONFIG_SDIO_STACK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1155
+    ]
   ],
   [
     "CONFIG_SECURE_STORAGE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1158
+    ]
   ],
   [
     "CONFIG_SETTINGS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1159
+    ]
   ],
   [
     "CONFIG_SHELL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1160
+    ]
   ],
   [
     "CONFIG_STATS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1161
+    ]
   ],
   [
     "CONFIG_STREAM_FLASH",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1166
+    ]
   ],
   [
     "CONFIG_TASK_WDT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1169
+    ]
   ],
   [
     "CONFIG_ZTEST",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1174
+    ]
   ],
   [
     "CONFIG_ZTEST_MOCKING",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1175
+    ]
   ],
   [
     "CONFIG_ZTRESS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1176
+    ]
   ],
   [
     "CONFIG_ZTEST_BENCHMARK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1181
+    ]
   ],
   [
     "CONFIG_TEST",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1184
+    ]
   ],
   [
     "CONFIG_TEST_USERSPACE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1185
+    ]
   ],
   [
     "CONFIG_HAS_COVERAGE_SUPPORT",
@@ -5051,92 +6020,122 @@
     "CONFIG_COVERAGE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1192
+    ]
   ],
   [
     "CONFIG_FORCE_COVERAGE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1193
+    ]
   ],
   [
     "CONFIG_COVERAGE_DUMP_PATH_EXCLUDE",
     "y",
     "string",
     "",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/subsys/testsuite/Kconfig.coverage",
-      96
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1194
     ]
   ],
   [
     "CONFIG_TIMING_FUNCTIONS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1197
+    ]
   ],
   [
     "CONFIG_TRACING",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1198
+    ]
   ],
   [
     "CONFIG_USB_DEVICE_STACK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1199
+    ]
   ],
   [
     "CONFIG_USB_DEVICE_STACK_NEXT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1200
+    ]
   ],
   [
     "CONFIG_USB_HOST_STACK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1201
+    ]
   ],
   [
     "CONFIG_USBC_STACK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1202
+    ]
   ],
   [
     "CONFIG_ZBUS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1203
+    ]
   ],
   [
     "CONFIG_MODULES",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1204
+    ]
   ],
   [
     "CONFIG_TOOLCHAIN_HOST_SUPPORTS_GNU_EXTENSIONS",
@@ -5162,11 +6161,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      62
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_LINKER_ORPHAN_SECTION_ERROR",
@@ -5181,10 +6177,10 @@
     "y",
     "hex",
     "0",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      178
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1219
     ]
   ],
   [
@@ -5203,46 +6199,52 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      193
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_HAVE_CUSTOM_LINKER_SCRIPT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1222
+    ]
   ],
   [
     "CONFIG_LINKER_SORT_BY_ALIGNMENT",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      243
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1223
     ]
   ],
   [
     "CONFIG_LINKER_USE_BOOT_SECTION",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1228
+    ]
   ],
   [
     "CONFIG_LINKER_USE_PINNED_SECTION",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1229
+    ]
   ],
   [
     "CONFIG_LINKER_GENERIC_SECTIONS_PRESENT_AT_BOOT",
@@ -5295,11 +6297,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      416
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_STD_C23",
@@ -5323,17 +6322,23 @@
     "CONFIG_GNU_C_EXTENSIONS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1245
+    ]
   ],
   [
     "CONFIG_CODING_GUIDELINE_CHECK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1246
+    ]
   ],
   [
     "CONFIG_NATIVE_LIBC",
@@ -5370,20 +6375,20 @@
     "CONFIG_COMPILER_FREESTANDING",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1250
+    ]
   ],
   [
     "CONFIG_SIZE_OPTIMIZATIONS",
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      517
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_SIZE_OPTIMIZATIONS_AGGRESSIVE",
@@ -5421,35 +6426,44 @@
     "CONFIG_COMPILER_WARNINGS_AS_ERRORS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1256
+    ]
   ],
   [
     "CONFIG_DEPRECATION_TEST",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1257
+    ]
   ],
   [
     "CONFIG_COMPILER_SAVE_TEMPS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1258
+    ]
   ],
   [
     "CONFIG_COMPILER_TRACK_MACRO_EXPANSION",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      594
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1259
     ]
   ],
   [
@@ -5457,10 +6471,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      602
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1260
     ]
   ],
   [
@@ -5468,11 +6482,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      608
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_FORTIFY_SOURCE_COMPILE_TIME",
@@ -5494,17 +6505,23 @@
     "CONFIG_COMPILER_OPT",
     "y",
     "string",
-    null,
-    "unset",
-    null
+    "",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1264
+    ]
   ],
   [
     "CONFIG_MISRA_SANE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1265
+    ]
   ],
   [
     "CONFIG_TOOLCHAIN_SUPPORTS_VLA_IN_STATEMENTS",
@@ -5532,20 +6549,20 @@
     "CONFIG_SCOPE_CLEANUP_HELPERS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1268
+    ]
   ],
   [
     "CONFIG_COMPILER_CODEGEN_VLIW_AUTO",
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      681
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_COMPILER_CODEGEN_VLIW_ENABLED",
@@ -5584,21 +6601,18 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      712
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_KERNEL_BIN_NAME",
     "y",
     "string",
     "zephyr",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      736
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1286
     ]
   ],
   [
@@ -5606,136 +6620,175 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      742
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1287
     ]
   ],
   [
     "CONFIG_OUTPUT_SYMBOLS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1288
+    ]
   ],
   [
     "CONFIG_CLEANUP_INTERMEDIATE_FILES",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1289
+    ]
   ],
   [
     "CONFIG_BUILD_GAP_FILL_PATTERN",
     "y",
     "hex",
     "0xFF",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      805
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1290
     ]
   ],
   [
     "CONFIG_BUILD_NO_GAP_FILL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1291
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_HEX_GAP_FILL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1292
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_S19_GAP_FILL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1293
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_VERILOG",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1294
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_MOT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1295
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_STRIPPED",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1296
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_COMPRESS_DEBUG_SECTIONS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1297
+    ]
   ],
   [
     "CONFIG_BUILD_ALIGN_LMA",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1298
+    ]
   ],
   [
     "CONFIG_APPLICATION_DEFINED_SYSCALL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1299
+    ]
   ],
   [
     "CONFIG_MAKEFILE_EXPORTS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1300
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_META",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1301
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_STRIP_PATHS",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      1064
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1302
     ]
   ],
   [
@@ -5743,64 +6796,76 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      1078
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1303
     ]
   ],
   [
     "CONFIG_EMIT_ALL_SYSCALLS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1304
+    ]
   ],
   [
     "CONFIG_WARN_DEPRECATED",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      1110
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1307
     ]
   ],
   [
     "CONFIG_WARN_EXPERIMENTAL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1308
+    ]
   ],
   [
     "CONFIG_IS_BOOTLOADER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1314
+    ]
   ],
   [
     "CONFIG_BOOTLOADER_BOSSA",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1315
+    ]
   ],
   [
     "CONFIG_LEGACY_GENERATED_INCLUDE_PATH",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/home/tl/Desktop/zephyr/zephyrproject/zephyr/Kconfig.zephyr",
-      1216
+      "/home/tl/Desktop/zephyr/zephyrproject/embedded/build/zephyr/.config",
+      1321
     ]
   ]
 ]

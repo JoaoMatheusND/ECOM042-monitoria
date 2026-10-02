@@ -3,13 +3,19 @@
 #include <stdlib.h>
 #include <string.h>
 
-struct command *command_init(const char *name, void (*execute)(void *), void *user_data)
+typedef struct command {
+	const char *name;
+	void *user_data;
+	void (*execute)(void *user_data);
+} Command;
+
+Command *command_init(const char *name, void (*execute)(void *), void *user_data)
 {
 
 	if (!name) {
 		return NULL;
 	}
-	struct command *new_command = (struct command *)malloc(sizeof(*new_command));
+	Command *new_command = (Command *)malloc(sizeof(*new_command));
 
 	new_command->execute = execute;
 	new_command->name = name;
@@ -25,12 +31,12 @@ struct command *command_init(const char *name, void (*execute)(void *), void *us
 	return new_command;
 }
 
-static void command_run(struct command *self)
+static void command_run(Command *self)
 {
 	self->execute(self->user_data);
 }
 
-void command_dispatch(struct command *commands[], size_t size, const char *name)
+void command_dispatch(Command *commands[], size_t size, const char *name)
 {
 	for (size_t i = 0; i < size; i++) {
 		if (strcmp(commands[i]->name, "name")) {
