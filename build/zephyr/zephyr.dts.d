@@ -1,0 +1,20 @@
+empty_file.o: \
+ /home/placidocordeiro/zephyrproject/zephyr/misc/empty_file.c \
+ /home/placidocordeiro/zephyrproject/zephyr/boards/native/native_sim/native_sim.dts \
+ /home/placidocordeiro/zephyrproject/zephyr/dts/posix/posix.dtsi \
+ /home/placidocordeiro/zephyrproject/zephyr/dts/common/skeleton.dtsi \
+ /home/placidocordeiro/zephyrproject/zephyr/dts/common/mem.h \
+ /home/placidocordeiro/zephyrproject/zephyr/include/zephyr/dt-bindings/adc/adc.h \
+ /home/placidocordeiro/zephyrproject/zephyr/include/zephyr/dt-bindings/dt-util.h \
+ /home/placidocordeiro/zephyrproject/zephyr/include/zephyr/sys/util_macro.h \
+ /home/placidocordeiro/zephyrproject/zephyr/include/zephyr/sys/util_internal.h \
+ /home/placidocordeiro/zephyrproject/zephyr/include/zephyr/sys/util_loops.h \
+ /home/placidocordeiro/zephyrproject/zephyr/include/zephyr/sys/util_listify.h \
+ /home/placidocordeiro/zephyrproject/zephyr/include/zephyr/sys/util_internal_is_eq.h \
+ /home/placidocordeiro/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_inc.h \
+ /home/placidocordeiro/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_dec.h \
+ /home/placidocordeiro/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_x2.h \
+ /home/placidocordeiro/zephyrproject/zephyr/include/zephyr/dt-bindings/display/panel.h \
+ /home/placidocordeiro/zephyrproject/zephyr/include/zephyr/dt-bindings/i2c/i2c.h \
+ /home/placidocordeiro/zephyrproject/zephyr/include/zephyr/dt-bindings/gpio/gpio.h \
+ /home/placidocordeiro/Documentos/codes/repositorios/ECOM042-monitoria-Placido/app.overlay

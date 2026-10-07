@@ -1,0 +1,63 @@
+cmake:
+  application:
+    configuration-dir: '/home/placidocordeiro/Documentos/codes/repositorios/ECOM042-monitoria-Placido'
+    source-dir: '/home/placidocordeiro/Documentos/codes/repositorios/ECOM042-monitoria-Placido'
+  board:
+    name: 'native_sim'
+    path:
+     - '/home/placidocordeiro/zephyrproject/zephyr/boards/native/native_sim'
+    qualifiers: 'native'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/placidocordeiro/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/home/placidocordeiro/zephyrproject/zephyr/boards/native/native_sim/native_sim.dts'
+     - '/home/placidocordeiro/Documentos/codes/repositorios/ECOM042-monitoria-Placido/app.overlay'
+    include-dirs:
+     - '/home/placidocordeiro/zephyrproject/modules/hal/ambiq/dts'
+     - '/home/placidocordeiro/zephyrproject/modules/hal/atmel/include'
+     - '/home/placidocordeiro/zephyrproject/modules/hal/bouffalolab/include'
+     - '/home/placidocordeiro/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/home/placidocordeiro/zephyrproject/modules/hal/gigadevice/include'
+     - '/home/placidocordeiro/zephyrproject/modules/hal/infineon/dts'
+     - '/home/placidocordeiro/zephyrproject/modules/hal/microchip/include'
+     - '/home/placidocordeiro/zephyrproject/modules/hal/microchip/dts'
+     - '/home/placidocordeiro/zephyrproject/modules/hal/nuvoton/dts'
+     - '/home/placidocordeiro/zephyrproject/modules/hal/nxp/dts'
+     - '/home/placidocordeiro/zephyrproject/modules/hal/stm32/dts'
+     - '/home/placidocordeiro/zephyrproject/modules/hal/ti/dts'
+     - '/home/placidocordeiro/zephyrproject/zephyr/include'
+     - '/home/placidocordeiro/zephyrproject/zephyr/include/zephyr'
+     - '/home/placidocordeiro/zephyrproject/zephyr/dts/common'
+     - '/home/placidocordeiro/zephyrproject/zephyr/dts/vendor'
+     - '/home/placidocordeiro/zephyrproject/zephyr/dts/tricore'
+     - '/home/placidocordeiro/zephyrproject/zephyr/dts/rx'
+     - '/home/placidocordeiro/zephyrproject/zephyr/dts/x86'
+     - '/home/placidocordeiro/zephyrproject/zephyr/dts/xtensa'
+     - '/home/placidocordeiro/zephyrproject/zephyr/dts/sparc'
+     - '/home/placidocordeiro/zephyrproject/zephyr/dts/riscv'
+     - '/home/placidocordeiro/zephyrproject/zephyr/dts/posix'
+     - '/home/placidocordeiro/zephyrproject/zephyr/dts/arm64'
+     - '/home/placidocordeiro/zephyrproject/zephyr/dts/arm'
+     - '/home/placidocordeiro/zephyrproject/zephyr/dts/arc'
+     - '/home/placidocordeiro/zephyrproject/zephyr/dts'
+    user-files:
+     - '/home/placidocordeiro/Documentos/codes/repositorios/ECOM042-monitoria-Placido/app.overlay'
+  kconfig:
+    files:
+     - '/home/placidocordeiro/zephyrproject/zephyr/boards/native/native_sim/native_sim_defconfig'
+     - '/home/placidocordeiro/Documentos/codes/repositorios/ECOM042-monitoria-Placido/prj.conf'
+    user-files:
+     - '/home/placidocordeiro/Documentos/codes/repositorios/ECOM042-monitoria-Placido/prj.conf'
+  toolchain:
+    name: 'host'
+    path: ''
+  zephyr:
+    version: '4.4.99'
+    zephyr-base: '/home/placidocordeiro/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: '/home/placidocordeiro/.venvs/zephyr/bin/west build -b native_sim .'
+  topdir: '/home/placidocordeiro/zephyrproject'
+  version: '1.5.0'
