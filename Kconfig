@@ -1,0 +1,10 @@
+mainmenu "Atividade 04"
+
+source "Kconfig.zephyr"
+
+config MINI_SHELL_LINE_SIZE
+	int "Limite de caracteres por linha"
+	default 64
+	range 1 256
+	help
+	  Limite da linha sem o terminador nulo.

@@ -1,0 +1,3 @@
+mainmenu "Testes da mini-shell"
+
+rsource "../../Kconfig"

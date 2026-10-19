@@ -1,0 +1,9 @@
+tests:
+  app.mini_shell:
+    platform_allow:
+      - native_sim
+    integration_platforms:
+      - native_sim
+    tags:
+      - shell
+    harness: ztest
