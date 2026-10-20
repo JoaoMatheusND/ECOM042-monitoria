@@ -1,0 +1,5 @@
+rsource "../../Kconfig"
+
+config TEST_GPIO_NOT_READY
+	bool "Teste de controlador nao inicializado"
+	default n

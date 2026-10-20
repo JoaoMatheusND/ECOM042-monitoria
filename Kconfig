@@ -1,0 +1,18 @@
+mainmenu "LEDs independentes"
+
+source "Kconfig.zephyr"
+
+config LED_SLOW_MS
+	int "Intervalo lento entre alternancias (ms)"
+	default 800
+	range 1 60000
+
+config LED_NORMAL_MS
+	int "Intervalo normal entre alternancias (ms)"
+	default 400
+	range 1 60000
+
+config LED_FAST_MS
+	int "Intervalo rapido entre alternancias (ms)"
+	default 100
+	range 1 60000
