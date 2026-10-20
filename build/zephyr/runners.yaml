@@ -1,0 +1,27 @@
+# Available runners configured by board.cmake.
+runners:
+- native
+
+# Default flash runner if --runner is not given.
+flash-runner: native
+
+# Default debug runner if --runner is not given.
+debug-runner: native
+
+# Common runner configuration values.
+config:
+  board_dir: /home/tl/Desktop/zephyr/zephyrproject/zephyr/boards/native/native_sim
+  # Build outputs:
+  elf_file: zephyr.elf
+  exe_file: zephyr.exe
+  # Host tools:
+  gdb: /nix/store/czg3a63k6m7ny0y8f3sbn5pak83gcwh5-gdb-17.2/bin/gdb
+  openocd: /nix/store/ky7z8ddicsjclx5dksj8g29dn4y9pbq9-zephyr-sdk-hosttools-1.0.1/bin/openocd
+  openocd_search:
+    - /nix/store/7jgjqrxkmfn489kgbgfz0hj5xmf80lpi-zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/share/openocd/scripts
+
+# Runner specific arguments
+args:
+  native:
+    []
+
