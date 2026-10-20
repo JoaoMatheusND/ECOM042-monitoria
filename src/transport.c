@@ -6,13 +6,18 @@
 #include <zephyr/drivers/uart.h>
 #include <zephyr/kernel.h>
 
+#define RX_QUEUE_CAPACITY   256
+#define SHELL_STACK_SIZE    2048
+#define SHELL_PRIORITY      7
+#define RESPONSE_EXTRA_SIZE 128
+
 struct rx_byte {
 	uint32_t sequence;
 	unsigned char value;
 };
 
-K_MSGQ_DEFINE(rx_queue, sizeof(struct rx_byte), 256, 4);
-K_THREAD_STACK_DEFINE(shell_stack, 2048);
+K_MSGQ_DEFINE(rx_queue, sizeof(struct rx_byte), RX_QUEUE_CAPACITY, 4);
+K_THREAD_STACK_DEFINE(shell_stack, SHELL_STACK_SIZE);
 
 static struct k_thread shell_thread;
 static const struct device *const uart = DEVICE_DT_GET(DT_NODELABEL(uart1));
@@ -51,7 +56,7 @@ static void shell_run(void *arg1, void *arg2, void *arg3)
 	struct line_buffer line = {0};
 	struct rx_byte item;
 	uint32_t expected = 0;
-	char response[CONFIG_MINI_SHELL_LINE_SIZE + 128];
+	char response[CONFIG_MINI_SHELL_LINE_SIZE + RESPONSE_EXTRA_SIZE];
 	enum line_result result;
 	size_t previous_length;
 
@@ -114,7 +119,7 @@ int transport_init(const struct shell_io *io)
 	}
 
 	k_thread_create(&shell_thread, shell_stack, K_THREAD_STACK_SIZEOF(shell_stack), shell_run,
-			NULL, NULL, NULL, 7, 0, K_NO_WAIT);
+			NULL, NULL, NULL, SHELL_PRIORITY, 0, K_NO_WAIT);
 	uart_irq_rx_enable(uart);
 	return 0;
 }

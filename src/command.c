@@ -97,12 +97,12 @@ static int echo_execute(const char *args, const struct shell_io *io, char *out, 
 	return snprintf(out, size, "%s", args);
 }
 
-typedef struct {
+struct command {
 	const char *name;
 	int (*execute)(const char *args, const struct shell_io *io, char *out, size_t size);
-} Command;
+};
 
-static const Command commands[] = {
+static const struct command commands[] = {
 	{"HELP", help_execute},     {"LED", led_execute},   {"BTN", button_execute},
 	{"UPTIME", uptime_execute}, {"ECHO", echo_execute},
 };
