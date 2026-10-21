@@ -14,13 +14,20 @@ struct shell_io {
 };
 
 /**
+ * @brief Verifique se todas as operacoes obrigatorias foram fornecidas.
+ * @param io Operacoes a verificar; pode ser NULL.
+ * @return true se a estrutura e todos os callbacks forem validos.
+ */
+bool shell_io_valid(const struct shell_io *io);
+
+/**
  * @brief Despache um comando e escreva a resposta sem terminador de linha final.
  * @param line Linha terminada em NUL.
  * @param io Operacoes de acesso ao hardware.
  * @param[out] response Buffer do chamador para a resposta terminada em NUL.
  * @param capacity Capacidade do buffer em bytes, incluindo o NUL.
  * @retval 0 Resposta escrita, inclusive para comandos invalidos.
- * @retval -EINVAL Ponteiro nulo ou capacidade zero.
+ * @retval -EINVAL Ponteiro ou callback nulo, ou capacidade zero.
  * @retval -ENOSPC Resposta nao coube ou houve falha na formatacao.
  */
 int command_dispatch(const char *line, const struct shell_io *io, char *response, size_t capacity);

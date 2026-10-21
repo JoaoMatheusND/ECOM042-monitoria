@@ -230,4 +230,37 @@ ZTEST(shell, test_backspace_at_limit)
 	zassert_equal(line.text[CONFIG_MINI_SHELL_LINE_SIZE - 1], 'b');
 }
 
+ZTEST(shell, test_missing_callbacks)
+{
+	struct shell_io incomplete = io;
+	char response[32] = "sem alteracao";
+
+	zassert_true(shell_io_valid(&io));
+	zassert_false(shell_io_valid(NULL));
+	incomplete.led_set = NULL;
+	zassert_equal(command_dispatch("LED ON", &incomplete, response, sizeof(response)), -EINVAL);
+	incomplete = io;
+	incomplete.led_get = NULL;
+	zassert_equal(command_dispatch("LED", &incomplete, response, sizeof(response)), -EINVAL);
+	incomplete = io;
+	incomplete.button_read = NULL;
+	zassert_equal(command_dispatch("BTN", &incomplete, response, sizeof(response)), -EINVAL);
+	incomplete = io;
+	incomplete.uptime_get = NULL;
+	zassert_equal(command_dispatch("UPTIME", &incomplete, response, sizeof(response)), -EINVAL);
+	zassert_str_equal(response, "sem alteracao");
+	zassert_equal(writes, 0);
+	zassert_false(led);
+}
+
+ZTEST(shell, test_null_arguments)
+{
+	char response[32];
+
+	zassert_equal(command_dispatch(NULL, &io, response, sizeof(response)), -EINVAL);
+	zassert_equal(command_dispatch("LED ON", NULL, response, sizeof(response)), -EINVAL);
+	zassert_equal(command_dispatch("LED ON", &io, NULL, sizeof(response)), -EINVAL);
+	zassert_equal(writes, 0);
+}
+
 ZTEST_SUITE(shell, NULL, NULL, before_test, NULL, NULL);

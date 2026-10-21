@@ -107,13 +107,19 @@ static const struct command commands[] = {
 	{"UPTIME", uptime_execute}, {"ECHO", echo_execute},
 };
 
+bool shell_io_valid(const struct shell_io *io)
+{
+	return io != NULL && io->led_set != NULL && io->led_get != NULL &&
+	       io->button_read != NULL && io->uptime_get != NULL;
+}
+
 int command_dispatch(const char *line, const struct shell_io *io, char *response, size_t capacity)
 {
 	size_t length;
 	const char *args;
 	int ret;
 
-	if (line == NULL || io == NULL || response == NULL || capacity == 0) {
+	if (line == NULL || !shell_io_valid(io) || response == NULL || capacity == 0) {
 		return -EINVAL;
 	}
 
@@ -129,6 +135,9 @@ int command_dispatch(const char *line, const struct shell_io *io, char *response
 	/* O dispatcher so conhece o nome e o ponteiro da funcao. */
 	for (size_t i = 0; i < sizeof(commands) / sizeof(commands[0]); i++) {
 		if (word_equal(line, length, commands[i].name)) {
+			if (commands[i].execute == NULL) {
+				return -EINVAL;
+			}
 			ret = commands[i].execute(args, io, response, capacity);
 			return ret < 0 || (size_t)ret >= capacity ? -ENOSPC : 0;
 		}

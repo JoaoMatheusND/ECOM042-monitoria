@@ -109,6 +109,9 @@ int transport_init(const struct shell_io *io)
 {
 	int ret;
 
+	if (!shell_io_valid(io)) {
+		return -EINVAL;
+	}
 	if (!device_is_ready(uart)) {
 		return -ENODEV;
 	}
