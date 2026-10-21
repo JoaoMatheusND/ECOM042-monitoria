@@ -45,7 +45,8 @@ static int64_t wait_level(size_t index, int expected, int64_t deadline)
 		if (level(index) == expected) {
 			return k_uptime_get();
 		}
-		k_msleep(1);
+		/* Amostra a cada 1 ms mesmo quando o tick do kernel vale 10 ms. */
+		k_busy_wait(1000);
 	}
 	zassert_equal(level(index), expected, "LED nao mudou no prazo");
 	return k_uptime_get();
@@ -205,6 +206,26 @@ ZTEST(leds, test_invalid_arguments)
 	zassert_equal(led_blink(LED_ALL, (enum led_pattern) - 1), -EINVAL);
 	zassert_equal(level(0), 0);
 	zassert_equal(level(1), 0);
+}
+
+ZTEST(leds, test_frequent_actions_keep_other_led_blinking)
+{
+	int previous = 0;
+	int changes = 0;
+	int64_t end;
+
+	zassert_ok(led_blink(0, LED_FAST));
+	end = k_uptime_get() + 4 * CONFIG_LED_FAST_MS;
+	while (k_uptime_get() < end) {
+		int current;
+
+		zassert_ok(led_on(1));
+		k_busy_wait(1000);
+		current = level(0);
+		changes += current != previous;
+		previous = current;
+	}
+	zassert_true(changes >= 3, "Outro LED adiou as piscadas: %d trocas", changes);
 }
 
 ZTEST_SUITE(leds, NULL, NULL, before, after, NULL);

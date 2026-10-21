@@ -6,13 +6,22 @@ config LED_SLOW_MS
 	int "Intervalo lento entre alternancias (ms)"
 	default 800
 	range 1 60000
+	help
+	  O intervalo deve corresponder a um numero inteiro de ticks do kernel.
+	  Por exemplo: com 100 ticks/s, use multiplos de 10 ms.
 
 config LED_NORMAL_MS
 	int "Intervalo normal entre alternancias (ms)"
 	default 400
 	range 1 60000
+	help
+	  O intervalo deve corresponder a um numero inteiro de ticks do kernel.
+	  Por exemplo: com 100 ticks/s, use multiplos de 10 ms.
 
 config LED_FAST_MS
 	int "Intervalo rapido entre alternancias (ms)"
 	default 100
 	range 1 60000
+	help
+	  O intervalo deve corresponder a um numero inteiro de ticks do kernel.
+	  Por exemplo: com 100 ticks/s, use multiplos de 10 ms.

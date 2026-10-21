@@ -16,6 +16,14 @@ LOG_MODULE_REGISTER(leds, LOG_LEVEL_INF);
 static const struct gpio_dt_spec pins[] = {LISTIFY(8, LED_SPEC, ())};
 BUILD_ASSERT(ARRAY_SIZE(pins) >= 2, "Declare pelo menos dois LEDs no devicetree");
 
+/* Cada intervalo precisa ser representavel por ticks inteiros do kernel. */
+BUILD_ASSERT((CONFIG_LED_SLOW_MS * (uint64_t)CONFIG_SYS_CLOCK_TICKS_PER_SEC) % MSEC_PER_SEC == 0,
+	     "LED_SLOW_MS deve ser multiplo de um tick do kernel");
+BUILD_ASSERT((CONFIG_LED_NORMAL_MS * (uint64_t)CONFIG_SYS_CLOCK_TICKS_PER_SEC) % MSEC_PER_SEC == 0,
+	     "LED_NORMAL_MS deve ser multiplo de um tick do kernel");
+BUILD_ASSERT((CONFIG_LED_FAST_MS * (uint64_t)CONFIG_SYS_CLOCK_TICKS_PER_SEC) % MSEC_PER_SEC == 0,
+	     "LED_FAST_MS deve ser multiplo de um tick do kernel");
+
 struct led_state {
 	bool on;
 	bool blinking;

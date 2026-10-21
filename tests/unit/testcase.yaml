@@ -18,3 +18,13 @@ tests:
       - EXTRA_DTC_OVERLAY_FILE=not_ready.overlay
     extra_configs:
       - CONFIG_TEST_GPIO_NOT_READY=y
+  app.leds.coarse_clock:
+    platform_allow: native_sim
+    integration_platforms:
+      - native_sim
+    tags:
+      - gpio
+      - timer
+    harness: ztest
+    extra_configs:
+      - CONFIG_SYS_CLOCK_TICKS_PER_SEC=100
