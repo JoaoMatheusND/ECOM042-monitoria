@@ -23,6 +23,7 @@ static struct k_thread shell_thread;
 static const struct device *const uart = DEVICE_DT_GET(DT_NODELABEL(uart1));
 static const struct shell_io *shell_io;
 static uint32_t rx_sequence;
+static struct k_spinlock rx_lock;
 
 static void send_text(const char *text)
 {
@@ -34,6 +35,7 @@ static void send_text(const char *text)
 static void uart_receive(const struct device *dev, void *user_data)
 {
 	struct rx_byte item;
+	k_spinlock_key_t key;
 
 	ARG_UNUSED(user_data);
 	(void)uart_irq_update(dev);
@@ -41,14 +43,19 @@ static void uart_receive(const struct device *dev, void *user_data)
 		return;
 	}
 
-	/* A interrupcao apenas retira os bytes da UART e enfileira. */
-	while (uart_fifo_read(dev, &item.value, 1) == 1) {
+	key = k_spin_lock(&rx_lock);
+	/* So retira bytes da UART enquanto ha espaco na fila. */
+	while (k_msgq_num_free_get(&rx_queue) > 0 && uart_fifo_read(dev, &item.value, 1) == 1) {
 		item.sequence = rx_sequence++;
 		if (k_msgq_put(&rx_queue, &item, K_NO_WAIT) != 0) {
 			/* A lacuna na sequencia avisa a thread sobre a perda. */
 			continue;
 		}
 	}
+	if (k_msgq_num_free_get(&rx_queue) == 0) {
+		uart_irq_rx_disable(dev);
+	}
+	k_spin_unlock(&rx_lock, key);
 }
 
 static void shell_run(void *arg1, void *arg2, void *arg3)
@@ -69,6 +76,11 @@ static void shell_run(void *arg1, void *arg2, void *arg3)
 		if (k_msgq_get(&rx_queue, &item, K_FOREVER) != 0) {
 			continue;
 		}
+		/* Retoma a recepcao depois de liberar uma vaga, sem perder o CR/LF. */
+		k_spinlock_key_t key = k_spin_lock(&rx_lock);
+
+		uart_irq_rx_enable(uart);
+		k_spin_unlock(&rx_lock, key);
 		if (item.sequence != expected) {
 			line.discard = true;
 			line.after_cr = false;
