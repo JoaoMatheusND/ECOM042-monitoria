@@ -1,0 +1,25 @@
+menu "Mini-shell"
+
+config MINISHELL_LINE_SIZE
+	int "Tamanho maximo da linha de comando (bytes)"
+	default 64
+
+config MINISHELL_RESP_SIZE
+	int "Tamanho do buffer de resposta (bytes)"
+	default 256
+
+config MINISHELL_RX_RING_SIZE
+	int "Tamanho do ring buffer de recepcao (bytes)"
+	default 128
+
+config MINISHELL_THREAD_STACK_SIZE
+	int "Pilha da thread da shell"
+	default 2048
+
+config MINISHELL_THREAD_PRIO
+	int "Prioridade da thread da shell"
+	default 7
+
+endmenu
+
+source "Kconfig.zephyr"

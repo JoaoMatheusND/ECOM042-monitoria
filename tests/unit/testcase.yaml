@@ -1,0 +1,8 @@
+tests:
+  app.minishell.unit:
+    platform_allow:
+      - native_sim
+    tags:
+      - minishell
+      - unit
+    harness: ztest

@@ -1,0 +1,22 @@
+/* Botao no pino 1 de gpio0 (sw0) e uart1 ligada para os comandos */
+
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
+/ {
+	buttons {
+		compatible = "gpio-keys";
+
+		button0: button_0 {
+			gpios = <&gpio0 1 GPIO_ACTIVE_HIGH>;
+			label = "User button";
+		};
+	};
+
+	aliases {
+		sw0 = &button0;
+	};
+};
+
+&uart1 {
+	status = "okay";
+};
