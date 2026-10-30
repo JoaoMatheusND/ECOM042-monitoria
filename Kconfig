@@ -1,0 +1,17 @@
+menu "LEDs"
+
+config BLINK_SLOW_MS
+	int "Periodo do pisca lento (ms)"
+	default 1000
+
+config BLINK_NORMAL_MS
+	int "Periodo do pisca normal (ms)"
+	default 400
+
+config BLINK_FAST_MS
+	int "Periodo do pisca rapido (ms)"
+	default 100
+
+endmenu
+
+source "Kconfig.zephyr"

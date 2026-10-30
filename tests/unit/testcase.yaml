@@ -1,0 +1,8 @@
+tests:
+  app.led.unit:
+    platform_allow:
+      - native_sim
+    tags:
+      - led
+      - unit
+    harness: ztest

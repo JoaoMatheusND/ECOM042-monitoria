@@ -1,0 +1,22 @@
+/* led1 e led2 no gpio0, junto do led0 que ja vem na placa */
+
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
+&leds {
+	led1: led_1 {
+		gpios = <&gpio0 1 GPIO_ACTIVE_HIGH>;
+		label = "LED 1";
+	};
+
+	led2: led_2 {
+		gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
+		label = "LED 2";
+	};
+};
+
+/ {
+	aliases {
+		led1 = &led1;
+		led2 = &led2;
+	};
+};

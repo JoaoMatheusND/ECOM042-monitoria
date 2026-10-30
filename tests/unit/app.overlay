@@ -1,0 +1,38 @@
+/* Controlador GPIO emulado proprio do teste, com init adiado para testar o
+ * caso de controlador nao pronto. Os LEDs ficam nele e os aliases apontam
+ * para eles. */
+
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
+/ {
+	gpio_test: gpio_test {
+		compatible = "zephyr,gpio-emul";
+		gpio-controller;
+		#gpio-cells = <2>;
+		ngpios = <3>;
+		zephyr,deferred-init;
+		status = "okay";
+	};
+
+	test_leds {
+		compatible = "gpio-leds";
+
+		test_led0: test_led_0 {
+			gpios = <&gpio_test 0 GPIO_ACTIVE_HIGH>;
+		};
+
+		test_led1: test_led_1 {
+			gpios = <&gpio_test 1 GPIO_ACTIVE_HIGH>;
+		};
+
+		test_led2: test_led_2 {
+			gpios = <&gpio_test 2 GPIO_ACTIVE_HIGH>;
+		};
+	};
+
+	aliases {
+		led0 = &test_led0;
+		led1 = &test_led1;
+		led2 = &test_led2;
+	};
+};
