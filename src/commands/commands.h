@@ -4,11 +4,13 @@
 #include "cmd.h"
 
 /**
- * @brief Production command table.
+ * @brief Get the production command table.
  *
- * Terminated by an entry with @c name == @c NULL. Pass it as the @c table
- * argument of the functions in cmd.h.
+ * The table is terminated by an entry with @c name == @c NULL. Pass it as the
+ * @c table argument of the functions in cmd.h.
+ *
+ * @return Pointer to the first entry of the table (never @c NULL).
  */
-extern const struct cmd_entry commands_table[];
+const struct cmd_entry *commands_get_table(void);
 
 #endif
