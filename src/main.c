@@ -9,6 +9,8 @@
 
 #include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
+#include "commands/cmd.h"
+#include "commands/commands.h"
 
 LOG_MODULE_REGISTER(main, CONFIG_MAIN_LOG_LEVEL);
 
