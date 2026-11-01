@@ -10,10 +10,11 @@
 // #include <zephyr/kernel.h>
 #include "command.h"
 #include <stdint.h>
+#include <stdio.h>
 
 int main(void)
 {
-	printk("[LOG] Starting to handle commands...");
+	printf("[LOG] Starting to handle commands...\n");
 
 	dispatch(UART_CMD);
 	dispatch(BLE_CMD);
@@ -23,7 +24,7 @@ int main(void)
 	/*Constante existe mas não existe valor correspondente na tabela*/
 	dispatch(ERROR);
 
-	printk("[LOG] Finished handling");
+	printf("[LOG] Finished handling\n");
 
 	return 0;
 }

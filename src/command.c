@@ -1,31 +1,36 @@
 #include "command.h"
 #include <stdio.h>
-#include <zephyr/kernel.h>
 
 void handle_uart()
 {
-	printk("[LOG] Handling UART...");
+	printf("[LOG] Handling UART...\n");
 }
 
 void handle_ble()
 {
-	printk("[LOG] Handling BLE...");
+	printf("[LOG] Handling BLE...\n");
 }
 
 void handle_button()
 {
-	printk("[LOG] Handling button...");
+	printf("[LOG] Handling button...\n");
 }
 
 void handle_timer()
 {
-	printk("[LOG] Handling timer...");
+	printf("[LOG] Handling timer...\n");
 }
+const command_handler_t command_table[COMMAND_TABLE_SIZE] = {
+	[UART_CMD] = &handle_uart,
+	[TIMER_CMD] = &handle_timer,
+	[BUTTON_CMD] = &handle_button,
+	[BLE_CMD] = &handle_ble,
+};
 
 uint16_t dispatch(command_t command)
 {
 	if (command_table[command] == NULL) {
-		printk("[ERROR] No command with ID: %u", command);
+		printf("[ERROR] No command with ID: %u\n", command);
 		return ENOCMD;
 	}
 

@@ -21,10 +21,3 @@ void handle_button();
 void handle_timer();
 
 uint16_t dispatch(command_t command);
-
-const command_handler_t command_table[COMMAND_TABLE_SIZE] = {
-	[UART_CMD] = &handle_uart,
-	[TIMER_CMD] = &handle_timer,
-	[BUTTON_CMD] = &handle_button,
-	[BLE_CMD] = &handle_ble,
-};
