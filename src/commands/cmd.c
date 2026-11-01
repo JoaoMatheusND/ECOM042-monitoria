@@ -1,3 +1,5 @@
+#include <stdarg.h>
+#include <stdio.h>
 #include <strings.h>
 #include <errno.h>
 #include "cmd.h"
@@ -54,7 +56,7 @@ int execute(const struct cmd_entry *table, const char* name, const char* args, s
     const struct cmd_entry *command; 
     int ret;
 
-    if(out == NULL) {
+    if(out == NULL || args == NULL) {
         return -EINVAL; 
     }
 
@@ -68,5 +70,41 @@ int execute(const struct cmd_entry *table, const char* name, const char* args, s
         return -ENOSYS;
     }
 
-    return command->handler(args, out);
+    out->ret = command->handler(args, out);
+
+    return 0;
+}
+
+int cmd_out_printf(struct cmd_out *out, const char *fmt, ...) {
+    va_list ap;
+    size_t free_space;
+    int written;
+
+    if(out == NULL || fmt == NULL || out->len >= sizeof(out->buf)) {
+        return -EINVAL;
+    }
+
+    if(out->overflow) {
+        return 0;
+    }
+
+    free_space = sizeof(out->buf) - out->len;
+
+    va_start(ap, fmt);
+    written = vsnprintf(out->buf + out->len, free_space, fmt, ap);
+    va_end(ap);
+
+    if(written < 0) {
+        out->buf[out->len] = '\0';
+        return -EIO;
+    }
+
+    if((size_t)written >= free_space) {
+        out->len = sizeof(out->buf) - 1;
+        out->overflow = true;
+    } else {
+        out->len += (size_t)written;
+    }
+
+    return 0;
 }

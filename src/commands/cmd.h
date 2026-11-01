@@ -10,18 +10,22 @@
 #ifndef CMD_H_
 #define CMD_H_
 
+#include <stdbool.h>
 #include <stddef.h>
+#include <zephyr/toolchain.h>
 
 /**
- * @brief Response buffer lent by the caller to a command handler.
+ * @brief Response of a command.
  *
- * The caller owns the memory. The handler writes only the response content
- * (no trailing "\r\n" and no prompt).
+ * Created and initialized (zeroed) by the caller of execute(). The handler
+ * writes the response content (no trailing "\r\n" and no prompt) only through
+ * cmd_out_printf(), never directly into the fields.
  */
 struct cmd_out {
-	char *buf;    /**< Caller-owned buffer where the response is written. */
-	size_t size;  /**< Capacity of @c buf in bytes, including the terminator. */
-	size_t len;   /**< Number of bytes written by the handler, excluding the terminator. */
+	char buf[CONFIG_CMD_BUF_SIZE]; /**< Response, always null-terminated. */
+	int ret;                       /**< Value returned by the handler; set only by execute(). */
+	size_t len;                    /**< Number of bytes in @c buf, excluding the terminator. */
+	bool overflow;                 /**< true if any write did not fit and was truncated. */
 };
 
 /**
@@ -29,10 +33,11 @@ struct cmd_out {
  *
  * @param[in]  args Text following the command name, exactly as received
  *                  (never @c NULL; empty string when there are no arguments).
- * @param[out] out  Buffer where the handler writes its response.
+ *                  Validating it is up to the handler.
+ * @param[out] out  Response; written through cmd_out_printf().
  *
- * @retval 0       Success; the response is in @p out.
- * @retval -errno  Failure.
+ * @retval 0       Success.
+ * @retval -errno  Failure. execute() stores this value in @c out->ret.
  */
 typedef int (*cmd_handler_t)(const char *args, struct cmd_out *out);
 
@@ -63,19 +68,43 @@ struct cmd_entry {
 int get_description(const struct cmd_entry *table, const char *name, const char **description);
 
 /**
+ * @brief Append formatted text to a command response.
+ *
+ * Works like snprintf() on the free space of @p out. Text that does not fit
+ * is truncated (keeping @c buf null-terminated), @c out->overflow is set and
+ * the call still returns 0. Once @c out->overflow is set, further calls
+ * write nothing. @c out->len always matches what is stored in @c out->buf.
+ *
+ * Never pass user text as @p fmt; use @c "%s" and pass it as an argument.
+ *
+ * @param[in,out] out Response being built, already initialized.
+ * @param[in]     fmt printf-style format string.
+ * @param[in]     ... Format arguments.
+ *
+ * @retval 0        Text written, possibly truncated (check @c out->overflow).
+ * @retval -EINVAL  @p out or @p fmt is @c NULL, or @c out->len is not smaller than
+ *                  the buffer size (@p out was not initialized).
+ * @retval -EIO     Formatting error; @c out is left as it was before the call.
+ */
+int cmd_out_printf(struct cmd_out *out, const char *fmt, ...) __printf_like(2, 3);
+
+/**
  * @brief Find a command by name and run its handler.
  *
- * @param[in]  table Command table, terminated by an entry with @c name == @c NULL.
- * @param[in]  name  Command name (case-insensitive).
- * @param[in]  args  Arguments passed unchanged to the handler.
- * @param[out] out   Buffer where the handler writes its response.
+ * Only dispatch errors are returned here. The handler's own result is stored
+ * in @c out->ret, which is left untouched when the handler is not called.
+ * @p out is not initialized by this function: the caller must zero it.
  *
- * @retval -EINVAL  @p table, @p name or @p out is @c NULL.
+ * @param[in]     table Command table, terminated by an entry with @c name == @c NULL.
+ * @param[in]     name  Command name (case-insensitive).
+ * @param[in]     args  Arguments passed unchanged to the handler; empty string
+ *                      when there are none.
+ * @param[in,out] out   Response, written by the handler.
+ *
+ * @retval 0        The handler was called; its result is in @c out->ret.
+ * @retval -EINVAL  @p table, @p name, @p args or @p out is @c NULL.
  * @retval -ENOENT  No command with that name in @p table.
  * @retval -ENOSYS  The command was found but its handler is @c NULL.
- * @return Otherwise, the value returned by the handler (0 on success, or a
- *         negative errno). Note that a handler returning @c -ENOENT or
- *         @c -ENOSYS is indistinguishable from the cases above.
  */
 int execute(const struct cmd_entry *table, const char *name, const char *args, struct cmd_out *out);
 
