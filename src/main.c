@@ -15,15 +15,13 @@
 #include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
 
-LOG_MODULE_REGISTER(main, CONFIG_MAIN_LOG_LEVEL);
+LOG_MODULE_REGISTER(main, LOG_LEVEL_INF);
 
 static const struct device *const uart_dev = DEVICE_DT_GET(DT_NODELABEL(uart1));
 
 int main(void)
 {
 	int ret;
-
-	LOG_INF("Hello World! %s", CONFIG_BOARD);
 
 	ret = hal_init();
 
