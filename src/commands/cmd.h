@@ -108,4 +108,22 @@ int cmd_out_printf(struct cmd_out *out, const char *fmt, ...) __printf_like(2, 3
  */
 int execute(const struct cmd_entry *table, const char *name, const char *args, struct cmd_out *out);
 
+/**
+ * @brief Check whether the arguments of a command are exactly @p expected.
+ *
+ * Meant for handlers to validate their arguments. Whitespace at the start and
+ * at the end of @p args is ignored, and the comparison is case-insensitive.
+ * Nothing is copied or modified.
+ *
+ * Pass an empty @p expected to check that there are no arguments: it matches
+ * when @p args is empty or has only whitespace.
+ *
+ * @param[in] args     Arguments as received by the handler.
+ * @param[in] expected Text that @p args must be equal to, without surrounding whitespace.
+ *
+ * @retval true   @p args is equal to @p expected.
+ * @retval false  It is not, or @p args or @p expected is @c NULL.
+ */
+bool args_equal(const char *args, const char *expected);
+
 #endif

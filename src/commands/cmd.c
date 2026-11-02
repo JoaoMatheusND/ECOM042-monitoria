@@ -1,5 +1,7 @@
+#include <ctype.h>
 #include <stdarg.h>
 #include <stdio.h>
+#include <string.h>
 #include <strings.h>
 #include <errno.h>
 #include "cmd.h"
@@ -107,4 +109,24 @@ int cmd_out_printf(struct cmd_out *out, const char *fmt, ...) {
     }
 
     return 0;
+}
+
+bool args_equal(const char *args, const char *expected) {
+    size_t len;
+
+    if(args == NULL || expected == NULL) {
+        return false;
+    }
+
+    while(isspace((unsigned char)*args)) {
+        args++;
+    }
+
+    len = strlen(args);
+
+    while(len > 0 && isspace((unsigned char)args[len - 1])) {
+        len--;
+    }
+
+    return len == strlen(expected) && strncasecmp(args, expected, len) == 0;
 }
