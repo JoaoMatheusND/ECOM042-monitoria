@@ -1,0 +1,3 @@
+# The root Kconfig defines the project symbols and already sources
+# Kconfig.zephyr, so it must not be sourced again here.
+rsource "../../Kconfig"
