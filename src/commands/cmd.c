@@ -35,25 +35,6 @@ static int get_command(const struct cmd_entry *table, const char* name, const st
 
 }
 
-int get_description(const struct cmd_entry *table, const char* name, const char** description) {
-    const struct cmd_entry *command; 
-    int ret;
-
-    if(description == NULL) {
-        return -EINVAL;
-    }
-
-    ret = get_command(table, name, &command);
-
-    if(ret < 0) {
-        return ret;
-    }
-
-    *description = command->description; 
-
-    return 0; 
-}
-
 int execute(const struct cmd_entry *table, const char* name, const char* args, struct cmd_out *out) {
     const struct cmd_entry *command; 
     int ret;

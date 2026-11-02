@@ -54,20 +54,6 @@ struct cmd_entry {
 };
 
 /**
- * @brief Get the description of a command.
- *
- * @param[in]  table       Command table, terminated by an entry with @c name == @c NULL.
- * @param[in]  name        Command name (case-insensitive).
- * @param[out] description Receives a pointer to the command description.
- *                         Left untouched on failure.
- *
- * @retval 0        Command found; @p description was set.
- * @retval -EINVAL  @p table, @p name or @p description is @c NULL.
- * @retval -ENOENT  No command with that name in @p table.
- */
-int get_description(const struct cmd_entry *table, const char *name, const char **description);
-
-/**
  * @brief Append formatted text to a command response.
  *
  * Works like snprintf() on the free space of @p out. Text that does not fit
