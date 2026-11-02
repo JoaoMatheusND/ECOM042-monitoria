@@ -7,13 +7,13 @@
  * @date 19/10/2026
  *******************************************************************/
 
-#include <zephyr/device.h>
-#include <zephyr/kernel.h>
-#include <zephyr/logging/log.h>
 #include "commands/cmd.h"
 #include "commands/commands.h"
 #include "hal.h"
 #include "transport.h"
+#include <zephyr/device.h>
+#include <zephyr/kernel.h>
+#include <zephyr/logging/log.h>
 
 LOG_MODULE_REGISTER(main, CONFIG_MAIN_LOG_LEVEL);
 

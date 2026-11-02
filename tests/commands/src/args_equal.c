@@ -46,15 +46,8 @@ ZTEST(args_equal_suite, test_ignores_surrounding_whitespace)
 ZTEST(args_equal_suite, test_does_not_match_other_text)
 {
 	const struct args_case cases[] = {
-		{"OFF", "ON"},
-		{"O", "ON"},
-		{"ONN", "ON"},
-		{"ON OFF", "ON"},
-		{"O N", "ON"},
-		{"", "ON"},
-		{"   ", "ON"},
-		{"ON", ""},
-		{"x", ""},
+		{"OFF", "ON"}, {"O", "ON"},   {"ONN", "ON"}, {"ON OFF", "ON"}, {"O N", "ON"},
+		{"", "ON"},    {"   ", "ON"}, {"ON", ""},    {"x", ""},
 	};
 
 	assert_all(cases, ARRAY_SIZE(cases), false);

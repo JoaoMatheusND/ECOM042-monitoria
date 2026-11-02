@@ -7,7 +7,7 @@
  * What to do with that state (echo, dispatch, prompt) is up to the caller.
  *
  * The state is not protected against concurrent access.
- * 
+ *
  */
 
 #ifndef LINE_H_
@@ -30,10 +30,11 @@
  * line_feed() and line_reset() should modify it.
  */
 struct line {
-	char buf[CONFIG_UART_LINE_BUF_SIZE]; /**< Line text; null-terminated once the line ends without overflow. */
-	size_t len;                          /**< Number of characters in @c buf, excluding the terminator. */
-	bool line_terminated;                /**< true once Enter was received. */
-	bool overflow;                       /**< true if the line exceeded LINE_MAX_CHARS */
+	char buf[CONFIG_UART_LINE_BUF_SIZE]; /**< Line text; null-terminated once the line ends
+						without overflow. */
+	size_t len;           /**< Number of characters in @c buf, excluding the terminator. */
+	bool line_terminated; /**< true once Enter was received. */
+	bool overflow;        /**< true if the line exceeded LINE_MAX_CHARS */
 };
 
 /**

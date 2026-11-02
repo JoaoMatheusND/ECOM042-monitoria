@@ -48,9 +48,9 @@ typedef int (*cmd_handler_t)(const char *args, struct cmd_out *out);
  * @c name == @c NULL.
  */
 struct cmd_entry {
-	const char *name;         /**< Command name, compared case-insensitively. */
-	const char *description;  /**< Short description, used by the HELP command. */
-	cmd_handler_t handler;    /**< Function executed when the command is invoked. */
+	const char *name;        /**< Command name, compared case-insensitively. */
+	const char *description; /**< Short description, used by the HELP command. */
+	cmd_handler_t handler;   /**< Function executed when the command is invoked. */
 };
 
 /**

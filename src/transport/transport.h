@@ -13,8 +13,8 @@
 #ifndef TRANSPORT_H_
 #define TRANSPORT_H_
 
-#include <zephyr/device.h>
 #include "cmd.h"
+#include <zephyr/device.h>
 
 /**
  * @brief Start the shell on a UART.
@@ -31,7 +31,7 @@
  * - "ERR: command failed", when the handler failed without writing a response;
  * - "ERR: internal error", when the command exists but has no handler.
  *
- * @param[in] uart  UART device used for both directions. 
+ * @param[in] uart  UART device used for both directions.
  * @param[in] table Command table, terminated by an entry with @c name == @c NULL.
  *
  * @retval 0        The shell is running.

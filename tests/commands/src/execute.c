@@ -160,12 +160,9 @@ ZTEST(execute_suite, test_dispatch_errors)
 		const char *name;
 		int expected;
 	} cases[] = {
-		{cmds, "NOPE", -ENOENT},
-		{cmds, "", -ENOENT},
-		{cmds, "EC", -ENOENT},
-		{cmds, "ECHOX", -ENOENT},
-		{empty, "ECHO", -ENOENT},
-		{after_sentinel, "ECHO", -ENOENT},
+		{cmds, "NOPE", -ENOENT},  {cmds, "", -ENOENT},
+		{cmds, "EC", -ENOENT},    {cmds, "ECHOX", -ENOENT},
+		{empty, "ECHO", -ENOENT}, {after_sentinel, "ECHO", -ENOENT},
 		{cmds, "NOH", -ENOSYS},
 	};
 	struct cmd_out out;

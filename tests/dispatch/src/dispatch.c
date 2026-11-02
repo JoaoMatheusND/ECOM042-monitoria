@@ -61,15 +61,9 @@ ZTEST(dispatch_suite, test_splits_name_and_args)
 		const char *line;
 		const char *args;
 	} cases[] = {
-		{"ECHO hi", "hi"},
-		{"ECHO", ""},
-		{"ECHO ", ""},
-		{"ECHO  a", " a"},
-		{"ECHO a b", "a b"},
-		{"ECHO hi ", "hi "},
-		{"ECHO\thi", "hi"},
-		{" \t echo hi", "hi"},
-		{LIMIT_NAME " x", "x"},
+		{"ECHO hi", "hi"},  {"ECHO", ""},          {"ECHO ", ""},
+		{"ECHO  a", " a"},  {"ECHO a b", "a b"},   {"ECHO hi ", "hi "},
+		{"ECHO\thi", "hi"}, {" \t echo hi", "hi"}, {LIMIT_NAME " x", "x"},
 	};
 	struct cmd_out out;
 	int ret;
@@ -115,8 +109,8 @@ ZTEST(dispatch_suite, test_errors)
 
 		ret = dispatch(cmds, cases[i].line, &out);
 
-		zassert_equal(ret, cases[i].expected, "'%s': expected %d. Got: %d",
-			      cases[i].line, cases[i].expected, ret);
+		zassert_equal(ret, cases[i].expected, "'%s': expected %d. Got: %d", cases[i].line,
+			      cases[i].expected, ret);
 		zassert_equal(echo_state.calls, 0, "'%s': handler called", cases[i].line);
 		assert_untouched(&out);
 	}
