@@ -10,3 +10,5 @@ target_include_directories(app PRIVATE src)
 
 add_subdirectory(src/commands)
 add_subdirectory(src/dispatch)
+add_subdirectory(src/line)
+add_subdirectory(src/transport)

@@ -15,6 +15,23 @@ config CMD_BUF_SIZE
         write their response. Includes null terminator. Longer responses
         are truncated and flagged as overflow.
 
-# Must stay the last line: the unit test apps include this file with rsource
-# and rely on it to load Kconfig.zephyr.
+config UART_RX_QUEUE_SIZE
+    int "Size of the UART receive queue (bytes)"
+    default 128
+    range 16 1024
+    help
+        Number of bytes the interrupt callback can queue for the thread
+        that assembles lines. When the queue is full, new bytes are
+        dropped.
+
+config UART_THREAD_STACK_SIZE
+    int "Stack size of the UART thread (bytes)"
+    default 2048
+    range 1024 8192
+    help
+        Stack of the thread that assembles lines and runs the commands.
+        It holds a line buffer and a command response buffer, so it must
+        grow together with UART_LINE_BUF_SIZE and CMD_BUF_SIZE.
+
+
 source "Kconfig.zephyr"
