@@ -12,6 +12,7 @@
 #include <zephyr/logging/log.h>
 #include "commands/cmd.h"
 #include "commands/commands.h"
+#include "hal.h"
 #include "transport.h"
 
 LOG_MODULE_REGISTER(main, CONFIG_MAIN_LOG_LEVEL);
@@ -23,6 +24,13 @@ int main(void)
 	int ret;
 
 	LOG_INF("Hello World! %s", CONFIG_BOARD);
+
+	ret = hal_init();
+
+	if (ret < 0) {
+		LOG_ERR("hal_init failed: %d", ret);
+		return ret;
+	}
 
 	ret = transport_init(uart_dev, commands_get_table());
 
