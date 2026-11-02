@@ -1,0 +1,19 @@
+/* SPDX-License-Identifier: Apache-2.0 */
+/* O mesmo botao da aplicacao, para o teste ler sw0 pelo emulador. */
+
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+/ {
+	aliases {
+		sw0 = &sw0;
+	};
+
+	buttons {
+		compatible = "gpio-keys";
+
+		sw0: button_0 {
+			gpios = <&gpio0 1 GPIO_ACTIVE_HIGH>;
+			zephyr,code = <INPUT_KEY_0>;
+		};
+	};
+};

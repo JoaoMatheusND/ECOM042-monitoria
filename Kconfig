@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: Apache-2.0
+
+mainmenu "Mini-shell UART"
+
+source "Kconfig.zephyr"
+
+config APP_CMD_LINE_MAX
+	int "Tamanho maximo da linha de comando, em bytes"
+	default 64
+	range 1 256
+	help
+	  Numero maximo de caracteres aceitos antes do CR ou LF. Uma linha
+	  maior que isso e descartada por inteiro. O terminador nao entra
+	  na conta, e o byte de fim de string fica fora deste limite.

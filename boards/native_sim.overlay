@@ -1,0 +1,31 @@
+/* SPDX-License-Identifier: Apache-2.0 */
+/*
+ * native_sim ja descreve led0 (gpio0 pino 0, ativo em alto).
+ * sw0 nao existe no board: o botao entra por este overlay.
+ * uart1 existe, mas nas versoes novas do Zephyr nasce desabilitada.
+ */
+
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+&uart1 {
+	status = "okay";
+};
+
+/ {
+	chosen {
+		app,shell-uart = &uart1;
+	};
+
+	aliases {
+		sw0 = &sw0;
+	};
+
+	buttons {
+		compatible = "gpio-keys";
+
+		sw0: button_0 {
+			gpios = <&gpio0 1 GPIO_ACTIVE_HIGH>;
+			zephyr,code = <INPUT_KEY_0>;
+		};
+	};
+};
