@@ -1,0 +1,33 @@
+/* Overlay pensado para o native_sim. Em placa real, troque os gpios/uart
+ * (ou use boards/<placa>.overlay) mantendo os aliases shell-uart,
+ * shell-led e shell-btn. */
+#include <zephyr/dt-bindings/gpio/gpio.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+/* uart0 fica com o console (printk); o shell usa a uart1 (pseudo-terminal). */
+&uart1 {
+	status = "okay";
+};
+
+/ {
+	aliases {
+		shell-uart = &uart1;
+		shell-led = &shell_led;
+		shell-btn = &shell_btn;
+	};
+
+	shell_leds {
+		compatible = "gpio-leds";
+		shell_led: led_0 {
+			gpios = <&gpio0 0 GPIO_ACTIVE_HIGH>;
+		};
+	};
+
+	shell_keys {
+		compatible = "gpio-keys";
+		shell_btn: btn_0 {
+			gpios = <&gpio0 1 GPIO_ACTIVE_HIGH>;
+			zephyr,code = <INPUT_KEY_0>;
+		};
+	};
+};

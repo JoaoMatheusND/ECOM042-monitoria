@@ -1,0 +1,33 @@
+<testsuites>
+	<testsuite name="native_sim/native" timestamp="2026-11-02T23:05:05.100064" time="0.03" tests="26" failures="0" errors="0" skipped="0">
+		<properties>
+			<property name="version" value="v4.4.0-17350-g1ee3b93134be" />
+		</properties>
+		<testcase classname="minish.unit" name="minish.unit.line_editor.control_and_non_ascii_ignored" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.line_editor.too_long_with_crlf_then_next_line" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.line_editor.max_plus_one_is_too_long" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.line_editor.over_max_is_discarded_entirely" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.line_editor.exactly_max_is_accepted" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.line_editor.backspace_on_empty_is_ignored" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.line_editor.backspace_08_and_7f" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.line_editor.empty_line" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.line_editor.crlf_is_one_line" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.line_editor.chars_are_echoed" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.line_editor.simple_line_cr" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.line_editor.simple_line_lf" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.dispatch.small_output_buffer_never_overflows" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.dispatch.no_hw_ops" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.dispatch.hw_errors" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.dispatch.leading_and_trailing_whitespace" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.dispatch.blank_line_has_no_response" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.dispatch.unknown_command" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.dispatch.echo_keeps_text_and_case" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.dispatch.btn" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.dispatch.case_insensitive" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.dispatch.led_bad_arg" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.dispatch.led_toggle" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.dispatch.led_query" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.dispatch.led_on_off" time="0.00" />
+		<testcase classname="minish.unit" name="minish.unit.dispatch.help_lists_all_commands" time="0.00" />
+	</testsuite>
+</testsuites>

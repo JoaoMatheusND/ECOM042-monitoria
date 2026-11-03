@@ -1,0 +1,8 @@
+<testsuites>
+	<testsuite name="native_sim/native" timestamp="2026-11-02T23:05:05.100064" time="0.03" tests="1" failures="0" errors="0" skipped="0">
+		<properties>
+			<property name="version" value="v4.4.0-17350-g1ee3b93134be" />
+		</properties>
+		<testcase classname="native_sim/native:minish.unit" name="minish.unit" time="0.03" />
+	</testsuite>
+</testsuites>
