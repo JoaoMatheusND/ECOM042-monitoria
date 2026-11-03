@@ -1,0 +1,5 @@
+mainmenu "ECOM042 - Atividade 05: LEDs independentes com um único timer"
+
+rsource "Kconfig.led_ctrl"
+
+source "Kconfig.zephyr"

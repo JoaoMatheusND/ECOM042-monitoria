@@ -1,0 +1,46 @@
+/*
+ * Dois controladores GPIO emulados:
+ *  - test_gpio: pronto no boot (LEDs 0 e 1);
+ *  - late_gpio: zephyr,deferred-init, só fica pronto quando o teste
+ *    chama device_init() (LED 2). Serve para testar o init falhando.
+ */
+/ {
+	test_gpio: gpio_emul_test {
+		compatible = "zephyr,gpio-emul";
+		gpio-controller;
+		#gpio-cells = <2>;
+		ngpios = <8>;
+		status = "okay";
+	};
+
+	late_gpio: gpio_emul_late {
+		compatible = "zephyr,gpio-emul";
+		gpio-controller;
+		#gpio-cells = <2>;
+		ngpios = <8>;
+		zephyr,deferred-init;
+		status = "okay";
+	};
+
+	test_leds {
+		compatible = "gpio-leds";
+
+		test_led0: test_led_0 {
+			gpios = <&test_gpio 0 GPIO_ACTIVE_HIGH>;
+		};
+
+		test_led1: test_led_1 {
+			gpios = <&test_gpio 1 GPIO_ACTIVE_HIGH>;
+		};
+
+		test_led2: test_led_2 {
+			gpios = <&late_gpio 0 GPIO_ACTIVE_HIGH>;
+		};
+	};
+
+	aliases {
+		led0 = &test_led0;
+		led1 = &test_led1;
+		led2 = &test_led2;
+	};
+};

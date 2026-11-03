@@ -1,0 +1,29 @@
+# Opções do módulo led_ctrl, compartilhadas entre o app e os testes.
+
+menu "led_ctrl: LEDs piscando com um único k_timer"
+
+config LED_CTRL_PERIOD_SLOW_MS
+	int "Período do padrão lento (ms, ciclo completo aceso+apagado)"
+	default 1000
+	range 2 60000
+
+config LED_CTRL_PERIOD_NORMAL_MS
+	int "Período do padrão normal (ms, ciclo completo aceso+apagado)"
+	default 500
+	range 2 60000
+
+config LED_CTRL_PERIOD_FAST_MS
+	int "Período do padrão rápido (ms, ciclo completo aceso+apagado)"
+	default 200
+	range 2 60000
+
+config LED_CTRL_MAX_ALIAS
+	int "Quantos aliases ledN procurar no devicetree (led0 ... ledN-1)"
+	default 8
+	range 1 32
+
+module = LED_CTRL
+module-str = led_ctrl
+source "subsys/logging/Kconfig.template.log_config"
+
+endmenu

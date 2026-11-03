@@ -1,0 +1,24 @@
+/*
+ * native_sim já declara led0 (gpio0, pino 0). Aqui entram mais dois LEDs
+ * no mesmo controlador emulado: o código só conhece os aliases.
+ */
+/ {
+	app_leds {
+		compatible = "gpio-leds";
+
+		app_led1: app_led_1 {
+			gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
+			label = "LED 1";
+		};
+
+		app_led2: app_led_2 {
+			gpios = <&gpio0 3 GPIO_ACTIVE_HIGH>;
+			label = "LED 2";
+		};
+	};
+
+	aliases {
+		led1 = &app_led1;
+		led2 = &app_led2;
+	};
+};
