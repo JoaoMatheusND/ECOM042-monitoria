@@ -1,0 +1,23 @@
+# SPDX-License-Identifier: Apache-2.0
+
+config MINISHELL_LINE_BUF_SIZE
+	int "Tamanho do buffer de linha (bytes)"
+	default 64
+	range 8 256
+	help
+	  Tamanho fixo do buffer de linha, incluindo o terminador '\0'.
+	  Uma linha que nao cabe no buffer e descartada por inteiro e
+	  responde "ERR: line too long".
+
+config MINISHELL_RX_QUEUE_SIZE
+	int "Tamanho da fila de bytes recebidos pela ISR"
+	default 128
+	range 16 1024
+
+config MINISHELL_THREAD_STACK_SIZE
+	int "Tamanho da pilha da thread da shell"
+	default 2048
+
+config MINISHELL_THREAD_PRIORITY
+	int "Prioridade da thread da shell"
+	default 7

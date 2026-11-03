@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: Apache-2.0
+
+mainmenu "Mini-shell via UART"
+
+rsource "Kconfig.minishell"
+
+module = MAIN
+module-str = main
+source "subsys/logging/Kconfig.template.log_config"
+
+source "Kconfig.zephyr"
