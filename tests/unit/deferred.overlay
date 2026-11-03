@@ -1,0 +1,26 @@
+/* SPDX-License-Identifier: Apache-2.0 */
+/*
+ * Cenario "controlador nao pronto": o LED1 passa para um GPIO com
+ * zephyr,deferred-init, que so inicializa quando o teste chamar
+ * device_init().
+ */
+
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
+/ {
+	test_gpio_deferred: gpio_test_deferred {
+		compatible = "zephyr,gpio-emul";
+		gpio-controller;
+		#gpio-cells = <2>;
+		rising-edge;
+		falling-edge;
+		high-level;
+		low-level;
+		zephyr,deferred-init;
+		status = "okay";
+	};
+};
+
+&test_led1 {
+	gpios = <&test_gpio_deferred 0 GPIO_ACTIVE_HIGH>;
+};

@@ -1,0 +1,42 @@
+/* SPDX-License-Identifier: Apache-2.0 */
+/*
+ * Controlador GPIO emulado proprio do teste: o pino de cada LED e lido
+ * de volta com gpio_emul_output_get().
+ */
+
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
+/ {
+	aliases {
+		led0 = &test_led0;
+		led1 = &test_led1;
+		led2 = &test_led2;
+	};
+
+	test_gpio: gpio_test {
+		compatible = "zephyr,gpio-emul";
+		gpio-controller;
+		#gpio-cells = <2>;
+		rising-edge;
+		falling-edge;
+		high-level;
+		low-level;
+		status = "okay";
+	};
+
+	test_leds {
+		compatible = "gpio-leds";
+
+		test_led0: led_0 {
+			gpios = <&test_gpio 0 GPIO_ACTIVE_HIGH>;
+		};
+
+		test_led1: led_1 {
+			gpios = <&test_gpio 1 GPIO_ACTIVE_HIGH>;
+		};
+
+		test_led2: led_2 {
+			gpios = <&test_gpio 2 GPIO_ACTIVE_HIGH>;
+		};
+	};
+};

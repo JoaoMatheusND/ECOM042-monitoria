@@ -1,0 +1,7 @@
+# SPDX-License-Identifier: Apache-2.0
+
+mainmenu "Testes do modulo de LED"
+
+rsource "../../Kconfig.led"
+
+source "Kconfig.zephyr"

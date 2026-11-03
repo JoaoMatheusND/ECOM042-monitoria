@@ -1,0 +1,33 @@
+# SPDX-License-Identifier: Apache-2.0
+
+menu "Modulo de LED (um timer para todos)"
+
+config APP_LED_MAX_ALIASES
+	int "Quantos aliases ledN procurar no devicetree"
+	default 8
+	range 1 32
+	help
+	  O modulo procura led0, led1, ... ate este numero menos um.
+	  Aliases que nao existem sao ignorados. Um LED novo entra so
+	  pelo devicetree, sem funcao nova no codigo.
+
+config APP_LED_PERIOD_SLOW_MS
+	int "Periodo do pisca lento, em ms (ligado + desligado)"
+	default 1000
+	range 2 60000
+
+config APP_LED_PERIOD_NORMAL_MS
+	int "Periodo do pisca padrao, em ms (ligado + desligado)"
+	default 500
+	range 2 60000
+
+config APP_LED_PERIOD_FAST_MS
+	int "Periodo do pisca rapido, em ms (ligado + desligado)"
+	default 200
+	range 2 60000
+
+module = APP_LED
+module-str = app_led
+source "subsys/logging/Kconfig.template.log_config"
+
+endmenu

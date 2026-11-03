@@ -1,0 +1,17 @@
+common:
+  platform_allow:
+    - native_sim
+  integration_platforms:
+    - native_sim
+  tags:
+    - led
+
+tests:
+  atividade05.led.unit:
+    tags:
+      - unit
+  atividade05.led.deferred_init:
+    tags:
+      - unit
+    extra_args:
+      - EXTRA_DTC_OVERLAY_FILE=deferred.overlay
