@@ -1,5 +1,5 @@
-#include <zephyr/ztest.h>
 #include <string.h>
+#include <zephyr/ztest.h>
 
 #include "dispatch.h"
 #include "line_editor.h"

@@ -3,15 +3,15 @@
  *  - uma thread consome os bytes, monta linhas e chama o dispatch;
  *  - TX por uart_poll_out (simples; as respostas sao curtas).
  */
-#include "uart_transport.h"
 #include "dispatch.h"
 #include "line_editor.h"
+#include "uart_transport.h"
 
 #include <errno.h>
-#include <zephyr/kernel.h>
 #include <zephyr/drivers/uart.h>
-#include <zephyr/sys/ring_buffer.h>
+#include <zephyr/kernel.h>
 #include <zephyr/sys/atomic.h>
+#include <zephyr/sys/ring_buffer.h>
 
 #define PROMPT "> "
 #define BANNER "\r\nminish ready. Type HELP.\r\n"

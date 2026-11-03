@@ -2,8 +2,8 @@
 #include "board_io.h"
 
 #include <errno.h>
-#include <zephyr/kernel.h>
 #include <zephyr/drivers/gpio.h>
+#include <zephyr/kernel.h>
 #if defined(CONFIG_MINISH_SIM_BTN)
 #include <zephyr/drivers/gpio/gpio_emul.h>
 #endif

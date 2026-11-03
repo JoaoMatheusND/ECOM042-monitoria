@@ -153,10 +153,10 @@ static int cmd_echo(const char *args, char *out, size_t sz)
 /* ---------- tabela de comandos (function pointers) ---------- */
 
 static const struct minish_cmd cmds[] = {
-	{ "HELP", "HELP",                "list commands",       cmd_help },
-	{ "LED",  "LED [ON|OFF|TOGGLE]", "set / read the LED",  cmd_led  },
-	{ "BTN",  "BTN",                 "read the button",     cmd_btn  },
-	{ "ECHO", "ECHO <text>",         "reply with <text>",   cmd_echo },
+	{"HELP", "HELP", "list commands", cmd_help},
+	{"LED", "LED [ON|OFF|TOGGLE]", "set / read the LED", cmd_led},
+	{"BTN", "BTN", "read the button", cmd_btn},
+	{"ECHO", "ECHO <text>", "reply with <text>", cmd_echo},
 };
 
 static int cmd_help(const char *args, char *out, size_t sz)
@@ -166,8 +166,8 @@ static int cmd_help(const char *args, char *out, size_t sz)
 	(void)args;
 	out[0] = '\0';
 	for (size_t i = 0; i < sizeof(cmds) / sizeof(cmds[0]); i++) {
-		int n = snprintf(out + used, sz - used, "%s%-22s %s",
-				 i ? "\r\n" : "", cmds[i].usage, cmds[i].help);
+		int n = snprintf(out + used, sz - used, "%s%-22s %s", i ? "\r\n" : "",
+				 cmds[i].usage, cmds[i].help);
 
 		if (n < 0 || (size_t)n >= sz - used) {
 			break; /* truncou: mantem o que coube */
