@@ -1,0 +1,28 @@
+/*
+ * uart1 vira o canal de comandos (pseudo-terminal proprio no native_sim);
+ * a uart0 continua com o console/log. led0 ja existe no native_sim, o
+ * botao sw0 e adicionado no gpio emulado.
+ */
+
+/ {
+	chosen {
+		app,cmd-uart = &uart1;
+	};
+
+	aliases {
+		sw0 = &button0;
+	};
+
+	buttons {
+		compatible = "gpio-keys";
+
+		button0: button_0 {
+			gpios = <&gpio0 1 GPIO_ACTIVE_HIGH>;
+			label = "User button";
+		};
+	};
+};
+
+&uart1 {
+	status = "okay";
+};
