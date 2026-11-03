@@ -1,0 +1,26 @@
+# SPDX-License-Identifier: Apache-2.0
+
+mainmenu "ECOM042 Atividade-05 - LED driver with a single timer"
+
+config LED_PERIOD_SLOW_MS
+	int "Slow blink pattern period (ms)"
+	default 2000
+	range 20 60000
+	help
+	  Full cycle (on + off) of the slow blink pattern.
+
+config LED_PERIOD_NORMAL_MS
+	int "Normal blink pattern period (ms)"
+	default 1000
+	range 20 60000
+	help
+	  Full cycle (on + off) of the normal blink pattern.
+
+config LED_PERIOD_FAST_MS
+	int "Fast blink pattern period (ms)"
+	default 200
+	range 20 60000
+	help
+	  Full cycle (on + off) of the fast blink pattern.
+
+source "Kconfig.zephyr"
