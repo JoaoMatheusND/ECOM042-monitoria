@@ -1,0 +1,17 @@
+mainmenu "Mini-shell"
+
+source "Kconfig.zephyr"
+
+config SHELL_LINE_BUF_SIZE
+	int "Shell line buffer size"
+	default 64
+	help
+	  Maximum length of a command line accepted by the shell.
+
+config SHELL_THREAD_STACK_SIZE
+	int "Shell thread stack size"
+	default 1024
+
+config SHELL_THREAD_PRIORITY
+	int "Shell thread priority"
+	default 5
