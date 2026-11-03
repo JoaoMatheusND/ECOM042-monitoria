@@ -1,0 +1,9 @@
+tests:
+  led_ctrl.unit:
+    platform_allow:
+      - native_sim
+    integration_platforms:
+      - native_sim
+    tags:
+      - led_ctrl
+      - unit
