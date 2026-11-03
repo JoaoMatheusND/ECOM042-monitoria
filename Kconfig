@@ -1,0 +1,35 @@
+# SPDX-License-Identifier: Apache-2.0
+
+mainmenu "ECOM042 Atividade-04 - mini-shell UART"
+
+config MINISHELL_LINE_BUF_SIZE
+	int "Command line buffer size in bytes"
+	default 64
+	range 8 1024
+	help
+	  Tamanho do buffer da linha de comando. Uma linha que nao couber
+	  (nem com o terminador) e descartada por inteiro e respondida com
+	  "ERR: line too long".
+
+config MINISHELL_RESPONSE_SIZE
+	int "Response buffer size in bytes"
+	default 512
+	range 64 4096
+	help
+	  Tamanho do buffer onde o parser escreve a resposta de um comando.
+
+config MINISHELL_RX_QUEUE_SIZE
+	int "RX byte queue depth"
+	default 256
+	range 16 4096
+	help
+	  Profundidade da fila preenchida pela ISR da UART.
+
+config MINISHELL_THREAD_STACK_SIZE
+	int "Consumer thread stack size in bytes"
+	default 2048
+	range 1024 8192
+	help
+	  Stack da thread que consome os bytes e despacha os comandos.
+
+source "Kconfig.zephyr"

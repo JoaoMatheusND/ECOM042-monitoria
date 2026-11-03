@@ -1,0 +1,24 @@
+/*
+ * Atividade-04: a uart1 (desabilitada por padrao no native_sim) passa a ser
+ * o canal de comandos, separado do console (uart0).
+ */
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
+&uart1 {
+	status = "okay";
+};
+
+/ {
+	aliases {
+		sw0 = &button0;
+	};
+
+	buttons: buttons {
+		compatible = "gpio-keys";
+
+		button0: button_0 {
+			gpios = <&gpio0 1 GPIO_ACTIVE_HIGH>;
+			label = "Push button";
+		};
+	};
+};
