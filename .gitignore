@@ -1,0 +1,41 @@
+# Build artifacts
+build/
+build-*/
+cmake-build-*/
+out/
+
+# Zephyr / west
+.cache/
+twister-out*/
+.twister-out*
+*.log
+
+# IDEs / editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python (scripts / tooling)
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Debug / flash artifacts
+*.hex
+*.bin
+*.elf
+*.map
+*.lst
+*.dis
+
+.buttons.json
