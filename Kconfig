@@ -1,0 +1,21 @@
+mainmenu "ECOM042 - Atividade 04: mini-shell via UART"
+
+rsource "Kconfig.minishell"
+
+config MINISHELL_RX_QUEUE_LEN
+	int "Bytes que a fila RX (ISR -> thread) comporta"
+	default 128
+
+config MINISHELL_THREAD_STACK_SIZE
+	int "Stack da thread da mini-shell"
+	default 2048
+
+config MINISHELL_THREAD_PRIORITY
+	int "Prioridade da thread da mini-shell"
+	default 5
+
+module = MAIN
+module-str = main
+source "subsys/logging/Kconfig.template.log_config"
+
+source "Kconfig.zephyr"

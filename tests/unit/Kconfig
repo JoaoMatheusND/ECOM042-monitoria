@@ -1,0 +1,5 @@
+mainmenu "ECOM042 - Atividade 04: testes unitários"
+
+rsource "../../Kconfig.minishell"
+
+source "Kconfig.zephyr"

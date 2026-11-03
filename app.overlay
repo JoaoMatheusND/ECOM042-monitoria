@@ -1,0 +1,23 @@
+/ {
+	chosen {
+		/* UART usada como canal de comandos (a uart0 fica com o console/log). */
+		app,cmd-uart = &uart1;
+	};
+
+	aliases {
+		sw0 = &button0;
+	};
+
+	buttons {
+		compatible = "gpio-keys";
+
+		button0: button_0 {
+			gpios = <&gpio0 1 GPIO_ACTIVE_HIGH>;
+			label = "Botao";
+		};
+	};
+};
+
+&uart1 {
+	status = "okay";
+};
