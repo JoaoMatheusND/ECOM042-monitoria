@@ -1,0 +1,15 @@
+# Opções da mini-shell, compartilhadas entre o app e os testes unitários.
+
+config MINISHELL_LINE_SIZE
+	int "Tamanho do buffer de linha da mini-shell (bytes)"
+	default 64
+	range 8 256
+	help
+	  Tamanho fixo do buffer que monta a linha recebida pela UART,
+	  incluindo o terminador '\0'. Uma linha que não cabe é descartada
+	  inteira e a shell responde "ERR: line too long".
+
+config MINISHELL_RESP_SIZE
+	int "Tamanho do buffer de resposta da mini-shell (bytes)"
+	default 256
+	range 32 1024

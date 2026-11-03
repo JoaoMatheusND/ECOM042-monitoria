@@ -1,0 +1,9 @@
+tests:
+  minishell.unit:
+    platform_allow:
+      - native_sim
+    integration_platforms:
+      - native_sim
+    tags:
+      - minishell
+      - unit
