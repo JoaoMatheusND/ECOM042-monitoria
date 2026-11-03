@@ -1,0 +1,7 @@
+# SPDX-License-Identifier: Apache-2.0
+
+mainmenu "LEDs independentes com um unico timer"
+
+rsource "Kconfig.led"
+
+source "Kconfig.zephyr"
