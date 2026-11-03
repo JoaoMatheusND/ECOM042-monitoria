@@ -1,0 +1,44 @@
+/*
+ * Dois controladores gpio-emul so para o teste. O segundo tem
+ * zephyr,deferred-init: fica "nao pronto" ate o teste chamar
+ * device_init(), o que permite testar a falha da inicializacao.
+ */
+
+/ {
+	gpio_test: gpio_test {
+		compatible = "zephyr,gpio-emul";
+		gpio-controller;
+		#gpio-cells = <2>;
+		status = "okay";
+	};
+
+	gpio_deferred: gpio_deferred {
+		compatible = "zephyr,gpio-emul";
+		gpio-controller;
+		#gpio-cells = <2>;
+		zephyr,deferred-init;
+		status = "okay";
+	};
+
+	test_leds {
+		compatible = "gpio-leds";
+
+		test_led0: test_led_0 {
+			gpios = <&gpio_test 0 GPIO_ACTIVE_HIGH>;
+		};
+
+		test_led1: test_led_1 {
+			gpios = <&gpio_test 1 GPIO_ACTIVE_HIGH>;
+		};
+
+		test_led2: test_led_2 {
+			gpios = <&gpio_deferred 0 GPIO_ACTIVE_HIGH>;
+		};
+	};
+
+	aliases {
+		led0 = &test_led0;
+		led1 = &test_led1;
+		led2 = &test_led2;
+	};
+};
