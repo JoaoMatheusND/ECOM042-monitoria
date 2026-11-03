@@ -1,0 +1,35 @@
+/*
+ * Overlay do app de teste: controlador gpio-emul proprio (deferido, para
+ * testar o caminho de "controlador nao pronto") e dois LEDs observaveis.
+ */
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
+/ {
+	gpio_test: gpio@900 {
+		status = "okay";
+		compatible = "zephyr,gpio-emul";
+		reg = <0x900 4>;
+		gpio-controller;
+		#gpio-cells = <2>;
+		zephyr,deferred-init;
+	};
+
+	leds_test: leds-test {
+		compatible = "gpio-leds";
+
+		led_a: led_a {
+			gpios = <&gpio_test 0 GPIO_ACTIVE_HIGH>;
+			label = "LED A";
+		};
+
+		led_b: led_b {
+			gpios = <&gpio_test 1 GPIO_ACTIVE_HIGH>;
+			label = "LED B";
+		};
+	};
+
+	aliases {
+		led0 = &led_a;
+		led1 = &led_b;
+	};
+};
