@@ -1,0 +1,35 @@
+# SPDX-License-Identifier: Apache-2.0
+mainmenu "Mini-shell via UART"
+
+config MINISH_LINE_MAX
+	int "Tamanho maximo da linha de comando (bytes)"
+	default 64
+	range 8 512
+	help
+	  Linhas maiores sao descartadas por inteiro e respondem
+	  "ERR: line too long".
+
+config MINISH_RX_RING_SIZE
+	int "Tamanho do ring buffer de RX (ISR -> thread)"
+	default 128
+
+config MINISH_RESP_MAX
+	int "Tamanho do buffer de resposta"
+	default 256
+
+config MINISH_THREAD_STACK_SIZE
+	int "Stack da thread do shell"
+	default 2048
+
+config MINISH_SIM_BTN
+	bool "Simular o botao (GPIO emulado) alternando periodicamente"
+	depends on GPIO_EMUL
+	help
+	  Util no native_sim, onde nao ha botao fisico.
+
+config MINISH_SIM_BTN_PERIOD_MS
+	int "Periodo de alternancia do botao simulado (ms)"
+	default 4000
+	depends on MINISH_SIM_BTN
+
+source "Kconfig.zephyr"
