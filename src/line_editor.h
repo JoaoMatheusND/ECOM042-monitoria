@@ -34,7 +34,7 @@ enum line_editor_event {
 
 /** @brief Estado de uma linha em edicao. */
 struct line_editor {
-	char buf[CONFIG_MINISHELL_LINE_BUF_SIZE];
+	char buf[CONFIG_MINISHELL_LINE_BUF_SIZE + 1];
 	size_t len;
 	bool overflow;
 };

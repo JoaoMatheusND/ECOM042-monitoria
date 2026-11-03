@@ -90,7 +90,28 @@ ZTEST(minishell, test_led_on_off_and_status)
 ZTEST(minishell, test_led_invalid_argument)
 {
 	zassert_true(run("LED BLINK") > 0U);
-	zassert_str_equal(out, MINISHELL_ERR_INVALID_ARGUMENT);
+	zassert_str_equal(out, MINISHELL_ERR_UNKNOWN_COMMAND);
+}
+
+ZTEST(minishell, test_echo_without_text_has_no_response)
+{
+	zassert_equal(run("ECHO"), 0U);
+	zassert_str_equal(out, "");
+}
+
+ZTEST(minishell, test_echo_accepts_line_at_64_bytes)
+{
+	char line[CONFIG_MINISHELL_LINE_BUF_SIZE + 1];
+	const size_t prefix = 5U; /* "ECHO " */
+
+	memset(line, 'x', sizeof(line) - 1U);
+	line[sizeof(line) - 1U] = '\0';
+	memcpy(line, "ECHO ", prefix);
+
+	/* A linha tem exatamente CONFIG_MINISHELL_LINE_BUF_SIZE bytes. */
+	zassert_equal(strlen(line), CONFIG_MINISHELL_LINE_BUF_SIZE);
+	zassert_true(run(line) > 0U);
+	zassert_equal(strlen(out), CONFIG_MINISHELL_LINE_BUF_SIZE - prefix);
 }
 
 ZTEST(minishell, test_button_reads_value)
@@ -182,12 +203,12 @@ ZTEST(line_editor, test_line_at_limit_is_accepted)
 
 	line_editor_reset(&editor);
 
-	for (i = 0U; i < (CONFIG_MINISHELL_LINE_BUF_SIZE - 1U); i++) {
+	for (i = 0U; i < CONFIG_MINISHELL_LINE_BUF_SIZE; i++) {
 		zassert_equal(line_editor_feed(&editor, 'x'), LINE_EDITOR_EVENT_ECHO);
 	}
 
 	zassert_equal(line_editor_feed(&editor, '\r'), LINE_EDITOR_EVENT_LINE_READY);
-	zassert_equal(line_editor_length(&editor), CONFIG_MINISHELL_LINE_BUF_SIZE - 1U);
+	zassert_equal(line_editor_length(&editor), CONFIG_MINISHELL_LINE_BUF_SIZE);
 }
 
 ZTEST(line_editor, test_line_too_long_is_dropped_entirely)
@@ -197,7 +218,7 @@ ZTEST(line_editor, test_line_too_long_is_dropped_entirely)
 
 	line_editor_reset(&editor);
 
-	for (i = 0U; i < CONFIG_MINISHELL_LINE_BUF_SIZE; i++) {
+	for (i = 0U; i < (CONFIG_MINISHELL_LINE_BUF_SIZE + 1U); i++) {
 		(void)line_editor_feed(&editor, 'x');
 	}
 

@@ -139,7 +139,7 @@ static int cmd_led(int argc, char **argv, const char *rest, struct response *out
 	}
 
 	if (argc > 2) {
-		resp_puts(out, MINISHELL_ERR_INVALID_ARGUMENT);
+		resp_puts(out, MINISHELL_ERR_UNKNOWN_COMMAND);
 		return -EINVAL;
 	}
 
@@ -148,7 +148,7 @@ static int cmd_led(int argc, char **argv, const char *rest, struct response *out
 	} else if (str_eq_ci(argv[1], "OFF")) {
 		on = false;
 	} else {
-		resp_puts(out, MINISHELL_ERR_INVALID_ARGUMENT);
+		resp_puts(out, MINISHELL_ERR_UNKNOWN_COMMAND);
 		return -EINVAL;
 	}
 
@@ -207,8 +207,8 @@ static int cmd_echo(int argc, char **argv, const char *rest, struct response *ou
 	ARG_UNUSED(argv);
 
 	if ((rest == NULL) || (*rest == '\0')) {
-		resp_puts(out, MINISHELL_ERR_INVALID_ARGUMENT);
-		return -EINVAL;
+		/* "ECHO" sem texto devolve resposta vazia, como um Enter seco. */
+		return 0;
 	}
 
 	resp_puts(out, rest);
@@ -274,8 +274,8 @@ void minishell_init(const struct minishell_hw_ops *ops)
 
 size_t minishell_execute(const char *line, char *out, size_t out_len)
 {
-	char work[CONFIG_MINISHELL_LINE_BUF_SIZE];
-	char raw[CONFIG_MINISHELL_LINE_BUF_SIZE];
+	char work[CONFIG_MINISHELL_LINE_BUF_SIZE + 1];
+	char raw[CONFIG_MINISHELL_LINE_BUF_SIZE + 1];
 	char *argv[MINISHELL_MAX_ARGS];
 	const struct minishell_command *command;
 	const char *rest;

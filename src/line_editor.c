@@ -46,7 +46,7 @@ enum line_editor_event line_editor_feed(struct line_editor *editor, char byte)
 		return LINE_EDITOR_EVENT_IGNORED;
 	}
 
-	if (editor->len >= (sizeof(editor->buf) - 1U)) {
+	if (editor->len >= CONFIG_MINISHELL_LINE_BUF_SIZE) {
 		editor->overflow = true;
 		return LINE_EDITOR_EVENT_IGNORED;
 	}

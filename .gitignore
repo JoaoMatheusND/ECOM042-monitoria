@@ -1,0 +1,38 @@
+# --- Build (west build / cmake) ---
+build/
+build-*/
+build_*/
+zephyr.exe
+*.o
+*.obj
+*.a
+*.elf
+*.bin
+*.hex
+*.map
+*.d
+
+# --- Twister ---
+twister-out*/
+twister.log
+testplan.json
+
+# --- Python (scripts do Zephyr / twister) ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# --- west workspace criado por engano dentro do app ---
+# (west update aqui dentro baixaria ~2 GB; nunca versione isso)
+.west/
+zephyr/
+modules/
+
+# --- Editor / sistema ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store

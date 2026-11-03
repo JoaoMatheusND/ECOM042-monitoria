@@ -28,9 +28,8 @@ struct minishell_hw_ops {
 };
 
 /** @brief Respostas de erro compartilhadas com a camada de transporte. */
-#define MINISHELL_ERR_UNKNOWN_COMMAND  "ERR: unknown command"
-#define MINISHELL_ERR_INVALID_ARGUMENT "ERR: invalid argument"
-#define MINISHELL_ERR_LINE_TOO_LONG    "ERR: line too long"
+#define MINISHELL_ERR_UNKNOWN_COMMAND "ERR: unknown command"
+#define MINISHELL_ERR_LINE_TOO_LONG   "ERR: line too long"
 
 /** @brief Prompt impresso antes de cada linha de comando. */
 #define MINISHELL_PROMPT "> "
