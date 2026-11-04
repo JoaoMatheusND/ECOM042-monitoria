@@ -15,11 +15,11 @@
 
 /** Actions that can be applied to a LED. Used as index of the command table. */
 enum led_action {
-  LED_ACT_ON,
-  LED_ACT_OFF,
-  LED_ACT_TOGGLE,
-  LED_ACT_BLINK,
-  LED_ACT_COUNT,
+	LED_ACT_ON,
+	LED_ACT_OFF,
+	LED_ACT_TOGGLE,
+	LED_ACT_BLINK,
+	LED_ACT_COUNT,
 };
 
 /**
@@ -36,7 +36,7 @@ typedef int (*led_cmd_handler_t)(struct led_state *led, int arg);
 
 /** A LED command. */
 struct led_cmd {
-  led_cmd_handler_t handler; /**<Command action implementation. */
+	led_cmd_handler_t handler; /**<Command action implementation. */
 };
 
 /**

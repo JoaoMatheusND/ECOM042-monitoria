@@ -11,7 +11,7 @@
 
 ZTEST_SUITE(led_not_ready, NULL, NULL, NULL, NULL, NULL);
 
-ZTEST(led_not_ready, test_init_fails_not_ready) {
-  zassert_equal(led_init(), -ENODEV,
-                "init must fail if the controller is not ready");
+ZTEST(led_not_ready, test_init_fails_not_ready)
+{
+	zassert_equal(led_init(), -ENODEV, "init must fail if the controller is not ready");
 }
