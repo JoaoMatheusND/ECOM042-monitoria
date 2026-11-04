@@ -1,0 +1,21 @@
+# SPDX-License-Identifier: Apache-2.0
+config APP_LEDS_SLOW_MS
+	int "Intervalo entre trocas de estado do padrão LENTO (ms)"
+	default 1000
+	range 1 600000
+	help
+	  Tempo que o LED fica ligado (e depois desligado) no padrão lento.
+
+config APP_LEDS_NORMAL_MS
+	int "Intervalo entre trocas de estado do padrão PADRÃO (ms)"
+	default 500
+	range 1 600000
+
+config APP_LEDS_FAST_MS
+	int "Intervalo entre trocas de estado do padrão RÁPIDO (ms)"
+	default 150
+	range 1 600000
+
+module = APP_LEDS
+module-str = leds
+source "subsys/logging/Kconfig.template.log_config"
