@@ -1,0 +1,34 @@
+# SPDX-License-Identifier: Apache-2.0
+mainmenu "Mini-shell via UART"
+
+config MINISHELL_LINE_BUF_SIZE
+	int "Tamanho do buffer de linha (bytes, incluindo o '\\0')"
+	default 64
+	range 8 512
+	help
+	  Linhas maiores que (tamanho - 1) caracteres sao descartadas por
+	  inteiro e a shell responde "ERR: line too long".
+
+config MINISHELL_RX_QUEUE_SIZE
+	int "Tamanho da fila de bytes ISR -> thread"
+	default 256
+	range 4 4096
+	help
+	  O driver pode entregar uma rajada inteira (ex.: texto colado) dentro
+	  de uma unica ISR, antes da thread rodar. Se a fila encher, bytes sao
+	  descartados (a thread avisa via LOG_WRN).
+
+config MINISHELL_OUT_BUF_SIZE
+	int "Tamanho do buffer de resposta (bytes)"
+	default 384
+	range 64 2048
+
+config MINISHELL_THREAD_STACK_SIZE
+	int "Stack da thread da shell"
+	default 2048
+
+config MINISHELL_THREAD_PRIORITY
+	int "Prioridade da thread da shell"
+	default 5
+
+source "Kconfig.zephyr"

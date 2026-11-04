@@ -1,0 +1,28 @@
+/*
+ * native_sim:
+ *  - uart0 = console (stdout); uart1 = canal de comandos (pseudo-terminal)
+ *  - a placa nao tem botao: criamos sw0 no GPIO emulado (gpio0, pino 1)
+ */
+#include <zephyr/dt-bindings/gpio/gpio.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+/ {
+	aliases {
+		minishell-uart = &uart1;
+		sw0 = &button0;
+	};
+
+	buttons {
+		compatible = "gpio-keys";
+
+		button0: button_0 {
+			gpios = <&gpio0 1 GPIO_ACTIVE_HIGH>;
+			label = "Button 0";
+			zephyr,code = <INPUT_KEY_0>;
+		};
+	};
+};
+
+&uart1 {
+	status = "okay";
+};
