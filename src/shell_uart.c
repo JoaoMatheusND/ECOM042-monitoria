@@ -1,12 +1,12 @@
 #include <string.h>
-#include <zephyr/kernel.h>
 #include <zephyr/drivers/uart.h>
+#include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
 #include <zephyr/sys/atomic.h>
 
-#include "shell_uart.h"
 #include "core/line_editor.h"
 #include "core/shell_cmd.h"
+#include "shell_uart.h"
 
 LOG_MODULE_REGISTER(shell_uart, LOG_LEVEL_INF);
 
@@ -26,7 +26,6 @@ static atomic_t rx_drops;
 static char line_buf[CONFIG_MINISHELL_LINE_BUF_SIZE];
 static char out_buf[CONFIG_MINISHELL_OUT_BUF_SIZE];
 
-
 static void uart_rx_isr(const struct device *dev, void *user_data)
 {
 	uint8_t c;
@@ -45,7 +44,6 @@ static void uart_rx_isr(const struct device *dev, void *user_data)
 	}
 }
 
-
 static void tx_buf(const char *s, size_t len)
 {
 	for (size_t i = 0; i < len; i++) {
@@ -57,7 +55,6 @@ static void tx_str(const char *s)
 {
 	tx_buf(s, strlen(s));
 }
-
 
 static void shell_thread_fn(void *p1, void *p2, void *p3)
 {
@@ -107,7 +104,8 @@ static void shell_thread_fn(void *p1, void *p2, void *p3)
 		}
 
 		if (atomic_get(&rx_drops) != 0) {
-			LOG_WRN("RX queue overflow: %ld byte(s) dropped", (long)atomic_set(&rx_drops, 0));
+			LOG_WRN("RX queue overflow: %ld byte(s) dropped",
+				(long)atomic_set(&rx_drops, 0));
 		}
 	}
 }
@@ -128,8 +126,9 @@ int shell_uart_start(const struct device *uart, const struct shell_hw_ops *hw)
 		return ret;
 	}
 
-	k_thread_create(&shell_thread, shell_stack, K_THREAD_STACK_SIZEOF(shell_stack), shell_thread_fn,
-					NULL, NULL, NULL, CONFIG_MINISHELL_THREAD_PRIORITY, 0, K_NO_WAIT);
+	k_thread_create(&shell_thread, shell_stack, K_THREAD_STACK_SIZEOF(shell_stack),
+			shell_thread_fn, NULL, NULL, NULL, CONFIG_MINISHELL_THREAD_PRIORITY, 0,
+			K_NO_WAIT);
 	k_thread_name_set(&shell_thread, "minishell");
 
 	uart_irq_rx_enable(uart);

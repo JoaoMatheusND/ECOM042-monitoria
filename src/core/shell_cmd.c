@@ -7,7 +7,6 @@
 
 #define VERSION_STR "mini-shell 1.0"
 
-
 void shell_out_printf(struct shell_out *out, const char *fmt, ...)
 {
 	va_list ap;
@@ -72,15 +71,14 @@ static void err_hw(struct shell_out *out, int err)
 	shell_out_printf(out, err == -ENOTSUP ? "ERR: not supported" : "ERR: hardware error");
 }
 
-
 static void cmd_help(const struct shell_hw_ops *hw, int argc, char *argv[], struct shell_out *out);
 static void cmd_led(const struct shell_hw_ops *hw, int argc, char *argv[], struct shell_out *out);
 static void cmd_btn(const struct shell_hw_ops *hw, int argc, char *argv[], struct shell_out *out);
 static void cmd_uptime(const struct shell_hw_ops *hw, int argc, char *argv[],
-					   struct shell_out *out);
+		       struct shell_out *out);
 static void cmd_echo(const struct shell_hw_ops *hw, int argc, char *argv[], struct shell_out *out);
 static void cmd_version(const struct shell_hw_ops *hw, int argc, char *argv[],
-						struct shell_out *out);
+			struct shell_out *out);
 
 static const struct shell_cmd cmds[] = {
 	{"HELP", "HELP", "list commands", cmd_help},
@@ -179,7 +177,7 @@ static void cmd_echo(const struct shell_hw_ops *hw, int argc, char *argv[], stru
 }
 
 static void cmd_version(const struct shell_hw_ops *hw, int argc, char *argv[],
-						struct shell_out *out)
+			struct shell_out *out)
 {
 	(void)hw;
 	(void)argc;
@@ -187,7 +185,6 @@ static void cmd_version(const struct shell_hw_ops *hw, int argc, char *argv[],
 
 	shell_out_printf(out, VERSION_STR);
 }
-
 
 static bool is_space(char c)
 {

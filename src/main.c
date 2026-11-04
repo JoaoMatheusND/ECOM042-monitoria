@@ -1,5 +1,5 @@
-#include <zephyr/kernel.h>
 #include <zephyr/device.h>
+#include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
 
 #include "board_io.h"
