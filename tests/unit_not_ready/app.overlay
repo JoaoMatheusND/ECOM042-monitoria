@@ -1,0 +1,40 @@
+/* SPDX-License-Identifier: Apache-2.0 */
+
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
+/ {
+	aliases {
+		led0 = &test_led0;
+		led1 = &test_led1;
+	};
+
+	test_gpio_ok: gpio_ok {
+		compatible = "zephyr,gpio-emul";
+		gpio-controller;
+		#gpio-cells = <2>;
+		ngpios = <4>;
+		status = "okay";
+	};
+
+	/* Controlador que NÃO inicializa no boot. */
+	test_gpio_deferred: gpio_deferred {
+		compatible = "zephyr,gpio-emul";
+		gpio-controller;
+		#gpio-cells = <2>;
+		ngpios = <4>;
+		zephyr,deferred-init;
+		status = "okay";
+	};
+
+	test_leds {
+		compatible = "gpio-leds";
+
+		test_led0: test_led_0 {
+			gpios = <&test_gpio_ok 0 GPIO_ACTIVE_HIGH>;
+		};
+
+		test_led1: test_led_1 {
+			gpios = <&test_gpio_deferred 0 GPIO_ACTIVE_HIGH>;
+		};
+	};
+};
