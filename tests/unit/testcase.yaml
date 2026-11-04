@@ -1,0 +1,14 @@
+common:
+  tags: led
+  platform_allow: native_sim
+  integration_platforms:
+    - native_sim
+
+tests:
+  led.unit:
+    extra_args: DTC_OVERLAY_FILE="app.overlay"
+
+  led.unit.not_ready:
+    extra_args: DTC_OVERLAY_FILE="app.overlay;not_ready.overlay"
+    extra_configs:
+      - CONFIG_LED_TEST_NOT_READY=y

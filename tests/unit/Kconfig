@@ -1,0 +1,6 @@
+config LED_TEST_NOT_READY
+	bool "Build the 'GPIO controller not ready' test scenario"
+	help
+	  Selects the test file that runs with a deferred-init GPIO controller.
+
+rsource "../../Kconfig"

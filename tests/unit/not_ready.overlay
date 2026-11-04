@@ -1,0 +1,4 @@
+/* The controller is never initialized, so it is never ready. */
+&test_gpio {
+	zephyr,deferred-init;
+};
