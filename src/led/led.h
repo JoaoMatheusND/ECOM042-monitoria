@@ -16,10 +16,10 @@
 
 /** Blink profiles. Periods are set through Kconfig (CONFIG_LED_PERIOD_*_MS). */
 enum led_profile {
-	LED_PROFILE_SLOW,
-	LED_PROFILE_NORMAL,
-	LED_PROFILE_FAST,
-	LED_PROFILE_COUNT,
+  LED_PROFILE_SLOW,
+  LED_PROFILE_NORMAL,
+  LED_PROFILE_FAST,
+  LED_PROFILE_COUNT,
 };
 
 /**
