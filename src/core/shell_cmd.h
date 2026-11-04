@@ -26,7 +26,7 @@ void shell_out_printf(struct shell_out *out, const char *fmt, ...)
 	__attribute__((format(printf, 2, 3)));
 
 typedef void (*shell_cmd_fn)(const struct shell_hw_ops *hw, int argc, char *argv[],
-							 struct shell_out *out);
+			     struct shell_out *out);
 
 struct shell_cmd {
 	const char *name;  /* comparado sem diferenciar maiusculas */
