@@ -1,0 +1,40 @@
+# SPDX-License-Identifier: Apache-2.0
+
+menu "Mini-shell UART"
+
+config APP_LINE_BUF_SIZE
+	int "Tamanho maximo de uma linha de comando (bytes)"
+	default 64
+	range 8 1024
+	help
+	  Quantidade maxima de caracteres aceitos em uma linha. Uma linha
+	  maior que isso e descartada por inteiro e o firmware responde
+	  "ERR: line too long".
+
+config APP_RESP_BUF_SIZE
+	int "Tamanho do buffer de resposta (bytes)"
+	default 256
+	range 32 4096
+	help
+	  Buffer onde o modulo de dispatch escreve a resposta de um comando.
+
+config APP_RX_QUEUE_SIZE
+	int "Bytes na fila entre a ISR de RX e a thread da shell"
+	default 128
+	range 8 4096
+
+config APP_SHELL_THREAD_STACK_SIZE
+	int "Stack da thread da shell"
+	default 2048
+
+config APP_SHELL_THREAD_PRIORITY
+	int "Prioridade da thread da shell"
+	default 5
+
+module = MAIN
+module-str = main
+source "subsys/logging/Kconfig.template.log_config"
+
+endmenu
+
+source "Kconfig.zephyr"

@@ -1,0 +1,30 @@
+/*
+ * uart1 vira o canal de comandos (um pseudo-terminal proprio no native_sim);
+ * a uart0 continua sendo o console/log.
+ *
+ * O native_sim ja tem o led0 no gpio0 (pino 0). Aqui adicionamos o botao
+ * sw0 no pino 1 do mesmo controlador GPIO emulado.
+ */
+
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+/ {
+	aliases {
+		sw0 = &button0;
+		cmd-uart = &uart1;
+	};
+
+	buttons {
+		compatible = "gpio-keys";
+
+		button0: button_0 {
+			gpios = <&gpio0 1 GPIO_ACTIVE_HIGH>;
+			label = "User button";
+			zephyr,code = <INPUT_KEY_0>;
+		};
+	};
+};
+
+&uart1 {
+	status = "okay";
+};
