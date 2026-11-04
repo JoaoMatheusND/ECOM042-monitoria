@@ -1,0 +1,24 @@
+/*
+ * O native_sim ja tem o led0 no gpio0 (pino 0). Aqui adicionamos led1 e
+ * led2 nos pinos 1 e 2 do mesmo GPIO emulado. Numa placa real, basta que
+ * os aliases led0, led1, ... existam no devicetree da placa.
+ */
+
+&leds {
+	led1: led_1 {
+		gpios = <&gpio0 1 GPIO_ACTIVE_HIGH>;
+		label = "LED 1";
+	};
+
+	led2: led_2 {
+		gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
+		label = "LED 2";
+	};
+};
+
+/ {
+	aliases {
+		led1 = &led1;
+		led2 = &led2;
+	};
+};

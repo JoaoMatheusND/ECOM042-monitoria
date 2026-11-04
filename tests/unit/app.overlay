@@ -1,0 +1,41 @@
+/*
+ * GPIO emulado proprio para os testes, com zephyr,deferred-init: ele so
+ * fica pronto quando o teste chama device_init(). Isso permite testar
+ * led_init() falhando com o controlador nao pronto.
+ */
+
+/ {
+	test_gpio: test_gpio {
+		compatible = "zephyr,gpio-emul";
+		status = "okay";
+		gpio-controller;
+		#gpio-cells = <2>;
+		rising-edge;
+		falling-edge;
+		high-level;
+		low-level;
+		zephyr,deferred-init;
+	};
+
+	test_leds {
+		compatible = "gpio-leds";
+
+		test_led0: test_led_0 {
+			gpios = <&test_gpio 0 GPIO_ACTIVE_HIGH>;
+		};
+
+		test_led1: test_led_1 {
+			gpios = <&test_gpio 1 GPIO_ACTIVE_HIGH>;
+		};
+
+		test_led2: test_led_2 {
+			gpios = <&test_gpio 2 GPIO_ACTIVE_HIGH>;
+		};
+	};
+
+	aliases {
+		led0 = &test_led0;
+		led1 = &test_led1;
+		led2 = &test_led2;
+	};
+};

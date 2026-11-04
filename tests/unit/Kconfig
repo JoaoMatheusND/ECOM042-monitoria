@@ -1,0 +1,4 @@
+# SPDX-License-Identifier: Apache-2.0
+
+# Reaproveita as opcoes da aplicacao (CONFIG_APP_LED_*).
+rsource "../../Kconfig"

@@ -1,0 +1,32 @@
+# SPDX-License-Identifier: Apache-2.0
+
+menu "Modulo de LED"
+
+config APP_LED_SLOW_PERIOD_MS
+	int "Periodo do pisca lento (ms)"
+	default 1000
+	range 2 60000
+	help
+	  Periodo completo (ligado + desligado) do padrao LED_PATTERN_SLOW.
+
+config APP_LED_NORMAL_PERIOD_MS
+	int "Periodo do pisca padrao (ms)"
+	default 500
+	range 2 60000
+	help
+	  Periodo completo (ligado + desligado) do padrao LED_PATTERN_NORMAL.
+
+config APP_LED_FAST_PERIOD_MS
+	int "Periodo do pisca rapido (ms)"
+	default 200
+	range 2 60000
+	help
+	  Periodo completo (ligado + desligado) do padrao LED_PATTERN_FAST.
+
+module = APP_LED
+module-str = app_led
+source "subsys/logging/Kconfig.template.log_config"
+
+endmenu
+
+source "Kconfig.zephyr"
