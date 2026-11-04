@@ -8,6 +8,8 @@
  *******************************************************************/
 #include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
+#include "led/led.h"
+#include "led/led_cmd.h"
 
 LOG_MODULE_REGISTER(main, LOG_LEVEL_DBG);
 
