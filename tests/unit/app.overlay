@@ -1,0 +1,30 @@
+/ {
+	aliases {
+		led0 = &led_0;
+		led1 = &led_1;
+		led2 = &led_2;
+	};
+
+	test_gpio: test_gpio {
+		compatible = "zephyr,gpio-emul";
+		gpio-controller;
+		#gpio-cells = <2>;
+		ngpios = <8>;
+	};
+
+	leds {
+		compatible = "gpio-leds";
+
+		led_0: led_0 {
+			gpios = <&test_gpio 0 GPIO_ACTIVE_HIGH>;
+		};
+
+		led_1: led_1 {
+			gpios = <&test_gpio 1 GPIO_ACTIVE_HIGH>;
+		};
+
+		led_2: led_2 {
+			gpios = <&test_gpio 2 GPIO_ACTIVE_HIGH>;
+		};
+	};
+};

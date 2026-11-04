@@ -1,0 +1,22 @@
+config LED_PERIOD_SLOW_MS
+	int "Slow blink period (ms)"
+	default 1000
+	range 2 60000
+	help
+	  Full cycle time (on + off) of the slow blink profile.
+
+config LED_PERIOD_NORMAL_MS
+	int "Normal blink period (ms)"
+	default 500
+	range 2 60000
+	help
+	  Full cycle time (on + off) of the normal blink profile.
+
+config LED_PERIOD_FAST_MS
+	int "Fast blink period (ms)"
+	default 200
+	range 2 60000
+	help
+	  Full cycle time (on + off) of the fast blink profile.
+
+source "Kconfig.zephyr"
